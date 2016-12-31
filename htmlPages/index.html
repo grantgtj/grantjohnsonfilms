@@ -9,11 +9,10 @@
 </head>
 
 <body>
-<div class="wrap">
 
 <div class="navBarIndex row">
 	<div class="logo col-4">
-		<img src="../media/General/logo.png">
+		<p id="logotext"> GRANT JOHNSON / <span>cinematographer</span> </p>
 	</div>
 	<div class="navbarPages col-8">
 		<a href="Films.html"> FILMS </a>
@@ -24,7 +23,7 @@
 
 <div class="reel">
 	<div class="reelbox">
-		<a href="https://player.vimeo.com/video/179987054?autoplay=1&title=0&byline=0&portrait=0" data-lity> - View Reel - </a>
+		<a href="https://player.vimeo.com/video/179987054?autoplay=1&title=0&byline=0&portrait=0" data-hover="View Reel" data-lity> View Reel </a>
 	</div>
 	<div class="bgVid">
 		<video id="firevid" class="bgvid" muted autoplay loop>
@@ -47,7 +46,6 @@
 	</a>
 </div>
 	
-</div>
 <script src="../javaPlugins/jquery-3.1.1.js"></script>
 <script src="../javaPlugins/lity-2.2.2/dist/lity.js"></script>
 
@@ -57,7 +55,7 @@
    * Video element
    * @type {HTMLElement}
    */
-  var video = document.getElementById("my-video");
+  var video = document.getElementById("firevid");
 
   /**
    * Check if video can play, and play it
@@ -67,6 +65,7 @@
   });
 })();
 </script>
+
 
 </body>
 </html>

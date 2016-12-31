@@ -1,34 +1,26 @@
 @charset "UTF-8";
 /* CSS Document */
 
+@import url(rawline.css);
+
 @font-face {
-	font-family: ubuntu-regular;
-	src: url(../media/Fonts/ubunturegular.ttf);
+	font-family: ostrichsans-inline;
+    src: url(../media/Fonts/OstrichSansInline-Regular.otf);
 }
 
 @font-face {
-	font-family: ubuntu-bold;
-	src: url(../media/Fonts/ubuntubold.ttf);
+	font-family: ostrichsans-light;
+    src: url(../media/Fonts/OstrichSans-Light.otf);
 }
 
 @font-face {
-	font-family: ubuntu-light;
-	src: url(../media/Fonts/ubuntulight.ttf);
+	font-family: ostrichsans-medium;
+    src: url(../media/Fonts/OstrichSans-Medium.otf);
 }
 
 @font-face {
-	font-family: ubuntu-light-italic;
-	src: url(../media/Fonts/Ubuntu-LI.ttf);
-}
-
-@font-face {
-	font-family: ubuntu-medium;
-	src: url(../media/Fonts/ubtuntumedium.ttf);
-}
-
-@font-face {
-	font-family: franklin-gothic-medium;
-	src: url(../media/Fonts/franklingothicmedium.ttf);
+	font-family: ostrichsans-regular;
+    src: url(../media/Fonts/ostrich-sans-regular.ttf);
 }
 
 @media only screen and (min-width: 768px) {
@@ -58,15 +50,17 @@
 }
 
 * {
-	font-family: ubuntu-regular;
+	font-family: 'rawline', sans-serif;
+	font-weight: 500;
 }
 
-body {
-	margin:0;
-	height:100vh;
-	overflow:scroll;
-}
 
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow: scroll;
+}
 
 
 /* GENERAL ELEMENTS */
@@ -81,21 +75,24 @@ body {
 }
 
 .logo {
-	height: 100%;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content: flex-start;
+}
+
+.logo p {
+	text-decoration: none;
+	font-size: 25px;
+	color:white;
+	font-family: ostrichsans-inline;
+	margin-left: 30px;
+	margin-bottom: 30px;
 }
 
 .logo a {
-	height:100%;
-	width:100%;	
+	text-decoration: none;
 }
-
-.logo img {
-	height: 50px;
-	padding-left: 20px;
-	padding-top: 5px;
-	padding-bottom: 0px;
-}
-
 .logo a:hover {
 	opacity:.6;
 	transition-property: opacity;
@@ -103,6 +100,9 @@ body {
 	transition-timing-function: ease;
 }
 
+#logotext span {
+	font-family: ostrichsans-regular;
+}
 
 .navbarPages {
 	height:100%;
@@ -115,7 +115,9 @@ body {
 	text-decoration: none;
 	margin-right: 30px;
 	color:white;
-	font-family: franklin-gothic-medium;
+	font-size: 14px;
+	font-family: 'rawline', sans-serif; 
+	font-weight: 400;
 }
 
 .navbarPages a:hover {
@@ -127,7 +129,7 @@ body {
 
 
 .socialIcons {
-	position:fixed;
+	position:absolute;
 	bottom:0;
 	right:0;
 	height:25px;
@@ -238,7 +240,8 @@ body {
 }
 
 #Title {
-	font-family:ubuntu-bold;
+	font-family: 'rawline', sans-serif;
+	font-weight: 700;
 	font-size: 25px;
 	margin-bottom: 15px;
 	margin-top: 15px;
@@ -257,5 +260,6 @@ body {
 }
 
 #Camera span {
-	font-family: ubuntu-bold;
+	font-family: 'rawline', sans-serif;
+	font-weight: 700;
 }

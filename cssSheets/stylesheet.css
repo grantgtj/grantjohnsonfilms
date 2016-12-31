@@ -1,34 +1,26 @@
 @charset "UTF-8";
 /* CSS Document */
 
+@import url(rawline.css);
+
 @font-face {
-	font-family: ubuntu-regular;
-	src: url(../media/Fonts/ubunturegular.ttf);
+	font-family: ostrichsans-inline;
+    src: url(../media/Fonts/OstrichSansInline-Regular.otf);
 }
 
 @font-face {
-	font-family: ubuntu-bold;
-	src: url(../media/Fonts/ubuntubold.ttf);
+	font-family: ostrichsans-light;
+    src: url(../media/Fonts/OstrichSans-Light.otf);
 }
 
 @font-face {
-	font-family: ubuntu-light;
-	src: url(../media/Fonts/ubuntulight.ttf);
+	font-family: ostrichsans-medium;
+    src: url(../media/Fonts/OstrichSans-Medium.otf);
 }
 
 @font-face {
-	font-family: ubuntu-light-italic;
-	src: url(../media/Fonts/Ubuntu-LI.ttf);
-}
-
-@font-face {
-	font-family: ubuntu-medium;
-	src: url(../media/Fonts/ubtuntumedium.ttf);
-}
-
-@font-face {
-	font-family: franklin-gothic-medium;
-	src: url(../media/Fonts/franklingothicmedium.ttf);
+	font-family: ostrichsans-regular;
+    src: url(../media/Fonts/ostrich-sans-regular.ttf);
 }
 
 @media only screen and (min-width: 768px) {
@@ -58,7 +50,8 @@
 }
 
 * {
-	font-family: ubuntu-regular;
+	font-family: 'rawline', sans-serif;
+	font-weight: 500;
 }
 
 
@@ -82,21 +75,24 @@ html, body {
 }
 
 .logo {
-	height: 100%;
+	height:100%;
+	display:flex;
+	align-items:center;
+	justify-content: flex-start;
+}
+
+.logo p {
+	text-decoration: none;
+	font-size: 25px;
+	color:white;
+	font-family: ostrichsans-inline;
+	margin-left: 30px;
+	margin-bottom: 30px;
 }
 
 .logo a {
-	height:100%;
-	width:100%;	
+	text-decoration: none;
 }
-
-.logo img {
-	height: 50px;
-	padding-left: 20px;
-	padding-top: 5px;
-	padding-bottom: 0px;
-}
-
 .logo a:hover {
 	opacity:.6;
 	transition-property: opacity;
@@ -104,6 +100,9 @@ html, body {
 	transition-timing-function: ease;
 }
 
+#logotext span {
+	font-family: ostrichsans-regular;
+}
 
 .navbarPages {
 	height:100%;
@@ -116,7 +115,9 @@ html, body {
 	text-decoration: none;
 	margin-right: 30px;
 	color:white;
-	font-family: franklin-gothic-medium;
+	font-size: 14px;
+	font-family: 'rawline', sans-serif; 
+	font-weight: 400;
 }
 
 .navbarPages a:hover {
@@ -165,6 +166,13 @@ html, body {
 }
 
 
+.reelbox a:hover {
+	opacity:.6;
+	transition-property: opacity;
+	transition-duration: .4s;
+	transition-timing-function: ease;
+}
+
 .reelbox a {
 	text-decoration: none;
 	color:white;
@@ -174,22 +182,95 @@ html, body {
 	transform: translateX(-50%) translateY(-50%) translateY(60px);
 	text-align:center;
 	z-index: 100;
-	font-family: ubuntu-light;
+	font-family: 'rawline', sans-serif;
+	font-weight: 300;
 	font-size: 14px;
-	border: 1px solid white;
-	padding: 5px 10px 5px 10px;
+	padding: 0 5px;
+	-webkit-transition: color 0.3s;
+	-moz-transition: color 0.3s;
+	transition: color 0.3s;
 }
 
-.reelbox a:hover {
-	opacity:.6;
-	transition-property: opacity;
-	transition-duration: .4s;
-	transition-timing-function: ease;
+.reelbox a::before,
+
+.reelbox a::after {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	height: 1px;
+	margin-top: -1px;
+	background: white;
+	content: '';
+	z-index: -1;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	pointer-events: none;
 }
+
+.reelbox a::before {
+	-webkit-transform: translateY(-20px);
+	-moz-transform: translateY(-20px);
+	transform: translateY(-20px);
+}
+
+.reelbox a::after {
+	-webkit-transform: translateY(20px);
+	-moz-transform: translateY(20px);
+	transform: translateY(20px);
+}
+
+.reelbox a:hover,
+.reelbox a:focus {
+	color: #fff;
+}
+
+.reelbox a:hover::before,
+.reelbox a:hover::after,
+.reelbox a:focus::before,
+.reelbox a:focus::after {
+	opacity: 0.7;
+}
+
+.reelbox a:hover::before,
+.reelbox a:focus::before {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.reelbox a:hover::after,
+.reelbox a:focus::after {
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .bgvid {
 	position: fixed;
-	top: 50%;
+	top: 50%; 
 	left: 50%;
 	z-index: -1000;
 	min-width: 100%;
@@ -318,13 +399,15 @@ html, body {
 
 
 #Title {
-	font-family: ubuntu-bold;
+	font-family: 'rawline', sans-serif;
+	font-weight: 700;
 	font-size: 20px;
 	padding: 0;
 }
 
 #GenreandYear {
-	font-family: ubuntu-light;
+	font-family: 'rawline', sans-serif;
+	font-weight: 400;
 	font-size: 12px;
 	margin-top: -17px;
 }
@@ -352,15 +435,18 @@ html, body {
 }
 
 #Camera span {
-	font-family: ubuntu-bold;
+	font-family: 'rawline', sans-serif;
+	font-weight: 800;
 }
 
 #Lenses span {
-	font-family: ubuntu-bold;
+	font-family: 'rawline', sans-serif;
+	font-weight: 800;
 }
 
 #Aspect span {
-	font-family: ubuntu-bold;
+	font-family: 'rawline', sans-serif;
+	font-weight: 800;
 }
 
 
@@ -528,4 +614,5 @@ html, body {
 	font-size: 13px;
 	margin: 2% 5% 2% 5%;
 } 
+
 
