@@ -39,6 +39,7 @@
     .col-12 {width: 100%;}
 }
 
+
 [class*="col-"] {
     float: left;
 }
@@ -155,6 +156,17 @@ html, body {
 	height:20px;
 }
 
+.spacer {
+	height:100vh;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
 /* INDEX ELEMENTS */
 
 
@@ -247,27 +259,6 @@ html, body {
 	transform: rotate(-45deg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .bgvid {
 	position: fixed;
 	top: 50%; 
@@ -280,6 +271,7 @@ html, body {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+	background-color: black;
 }
 
 /* FIlMS MAIN PAGE ELEMENTS */
@@ -341,6 +333,79 @@ html, body {
 	display: none
 }
 
+ 
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+ 
+.fade-in {
+	opacity:0; 
+	-webkit-animation:fadeIn ease-in 1;  
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;  
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:.75s;
+	-moz-animation-duration:.5s;
+	animation-duration:.5s;
+}
+ 
+.fade-in.one {
+-webkit-animation-delay: .20s;
+-moz-animation-delay: .20s;
+animation-delay: .20s;
+}
+ 
+.fade-in.two {
+-webkit-animation-delay: .3s;
+-moz-animation-delay:.3s;
+animation-delay: .3s;
+}
+ 
+.fade-in.three {
+-webkit-animation-delay: .4s;
+-moz-animation-delay: .4s;
+animation-delay: .4s;
+}
+
+.fade-in.four {
+-webkit-animation-delay: .5s;
+-moz-animation-delay: .5s;
+animation-delay: .5s;
+}
+ 
+.fade-in.five {
+-webkit-animation-delay: .6s;
+-moz-animation-delay: .6s;
+animation-delay: .6s;
+}
+ 
+.fade-in.six {
+-webkit-animation-delay: .7s;
+-moz-animation-delay: .7s;
+animation-delay: .7s;
+}
+
+.fade-in.seven {
+-webkit-animation-delay: .8s;
+-moz-animation-delay: .8s;
+animation-delay: .8s;
+}
+
+.fade-in.eight {
+-webkit-animation-delay: .9s;
+-moz-animation-delay: .9s;
+animation-delay: .9s;
+}
+
+.fade-in.nine {
+-webkit-animation-delay: 1s;
+-moz-animation-delay: 1s;
+animation-delay: 1s;
+}
 
 /* FIlMS DETAIL PAGE ELEMENTS */
 
@@ -584,9 +649,6 @@ html, body {
 
 /* ABOUT ME PAGE ELEMENTS */
 
-.spacer {
-	height:100vh;
-}
 
 .biography {
 	height:100vh;
