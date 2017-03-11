@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="cssSheets/style-main.css">
+<meta charset="UTF-8">
+<title>Lapse</title>
+</head>
+
+<body>
+
+<div id="preloader">
+    <div id="status"></div>
+</div>
+
+<div class="pageWrapper">
+
+	<div class="header">
+		<div class="logo">
+			<p id="logotext"> GRANT JOHNSON / <span>cinematographer</span> </p>
+		</div>
+		<div class="pages">
+			<a href="Films.html"> FILMS </a>
+			<a href="Photos.html"> PHOTOS </a>
+			<a href="About.html"> ABOUT </a>
+		</div>	
+	</div>
+
+	<div class="backToFilmsButton fade-in three">
+	<img src="../media/General/backButton.png">
+	<a href="Films_old.html"> Back to Films </a>
+	</div>
+
+	<div class="filmsDetails">
+	<div class="col-1"></div>
+	<div class="filmsInfo col-2 fade-in one">
+		<p id="Title"> Lapse </p>
+		<p id="GenreandYear"> (Short Film, 2016) </p>
+		<p id="Summary"> Lapse is an NYU narrative thesis film directed by Maya Goldberg. </p>
+		<p id="Camera"> <span> Camera: </span> Arri Alexa </p>
+		<p id="Lenses"> <span> Lenses: </span> Panavision Primos </p>
+	</div>
+	<div class="col-1"></div>
+	<div class="stillsGallery fotorama col-7 fade-in two" data-nav="thumbs" data-thumbheight="64px" data-thumbwidth="150px" data-loop="true" data-thumbborderwidth="1">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		<img src="media/Films/Lapse/Stills/1.jpg">
+		
+	</div>
+	<div class="col-1"></div>
+	</div>
+	<div class="footer">
+		<div class="email">
+			<p> grantgtj@gmail.com </p>
+		</div>
+		<div class="socialIcons">
+			<a href="mailto:grantgtj@gmail.com">
+			<img src="media/General/socialBadges/email_white.png">
+			</a>	
+			<a href="https://www.instagram.com/grantgtj/" target="_top">
+			<img src="media/General/socialBadges/instagram_white.png">
+			</a>
+			<a href="https://vimeo.com/grantjohnson" target="_top">
+			<img src="media/General/socialBadges/vimeo_white.png">
+			</a>
+		</div>
+	</div>
+</div>
+
+<script src="javaPlugins/jquery-3.1.1.js"></script>
+
+<script>
+    //<![CDATA[
+        $(window).on('load', function() { 
+            $('#status').fadeOut(); 
+            $('#preloader').delay(350).fadeOut('slow'); 
+            $('body').delay(350).css({'overflow':'scroll'});
+			$('lapse-overlay').show();
+        })
+    //]]>
+</script> 
+
+<link href="../javaPlugins/fotorama-4.6.4/fotorama.css" rel="stylesheet">
+<script src="../javaPlugins/jquery-3.1.1.js"></script>
+<script src="../javaPlugins/fotorama-4.6.4/fotorama.js"></script>
+
+</body>
+</html>

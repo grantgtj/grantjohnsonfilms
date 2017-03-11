@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="cssSheets/style-main.css">
+<meta charset="UTF-8">
+<title>Photos</title>
+</head>
+
+<body>
+
+<div id="preloader">
+    <div id="status"></div>
+</div>
+
+<div class="pageWrapper">
+
+	<div class="header">
+		<div class="logo">
+			<p id="logotext"> GRANT JOHNSON / <span>cinematographer</span> </p>
+		</div>
+		<div class="pages">
+			<a href="Films.html"> FILMS </a>
+			<a href="Photos.html"> PHOTOS </a>
+			<a href="About.html"> ABOUT </a>
+		</div>	
+	</div>
+	
+	<div class="photosGridBigWrapper">
+		<div class="photosGridWrapper">
+			<ul id="photosGrid">	
+				<li>
+					<a class="photosGrid-cell" href="SouthernCalifornia.html">
+						<img class="photosGrid-img" id="SouthernCalifornia" src="#"/>
+						<span class="photosGrid-text">Southern California</span>
+					</a>
+				</li>
+				<li>
+					<a class="photosGrid-cell" href="NewYork.html">
+						<img class="photosGrid-img" id="NewYork" src="#"/>
+						<span class="photosGrid-text">New York</span>
+					</a>
+				</li>		
+				<li>
+					<a class="photosGrid-cell" href="Connecticut.html">
+						<img class="photosGrid-img" id="Connecticut" src="#"/>
+						<span class="photosGrid-text">Connecticut</span>
+					</a>
+				</li>
+				<li>
+					<a class="photosGrid-cell" href="PuntaIslita.html">
+						<img class="photosGrid-img" id="PuntaIslita" src="#"/>
+						<span class="photosGrid-text">Punta Islita</span>
+					</a>
+				</li>
+				<li>
+					<a class="photosGrid-cell" href="JoshuaTree.html">
+						<img class="photosGrid-img" id="JoshuaTree" src="#"/>
+						<span class="photosGrid-text">Joshua Tree</span>
+					</a>
+				</li>
+				<li>
+					<a class="photosGrid-cell" href="TheTroupe.html">
+						<img class="photosGrid-img" id="TheTroupe" src="#"/>
+						<span class="photosGrid-text">The Troupe</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="email">
+			<p> grantgtj@gmail.com </p>
+		</div>
+		<div class="socialIcons">
+			<a href="mailto:grantgtj@gmail.com">
+			<img src="media/General/socialBadges/email_white.png">
+			</a>	
+			<a href="https://www.instagram.com/grantgtj/" target="_top">
+			<img src="media/General/socialBadges/instagram_white.png">
+			</a>
+			<a href="https://vimeo.com/grantjohnson" target="_top">
+			<img src="media/General/socialBadges/vimeo_white.png">
+			</a>
+		</div>
+	</div>
+</div>
+
+<script src="javaPlugins/jquery-3.1.1.js"></script>
+<script src="javaPlugins/gridresize.js"> </script>
+
+<script>
+    //<![CDATA[
+        $(window).on('load', function() { 
+            $('#status').fadeOut(); 
+            $('#preloader').delay(350).fadeOut('slow'); 
+            $('body').delay(350).css({'overflow':'scroll'});
+        })
+    //]]>
+</script> 
+
+<script>
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+	$('.photosGrid-text').css({'opacity':'1'});
+}
+</script>
+
+</body>
+</html>

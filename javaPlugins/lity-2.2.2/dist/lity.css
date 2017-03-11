@@ -9,7 +9,6 @@
   bottom: 0;
   left: 0;
   white-space: nowrap;
-  background: #0b0b0b;
   background: rgba(0, 0, 0, 1);
   outline: none !important;
   opacity: 0;
@@ -84,7 +83,6 @@
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   -o-transition: -o-transform 0.3s ease;
-  transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease, -o-transform 0.3s ease;
 }
 .lity-loading .lity-content,
@@ -112,15 +110,16 @@
   z-index: 9994;
   width: 35px;
   height: 35px;
+  color: white;
   position: fixed;
-  right: 0;
+  left: 0;
   top: 0;
   -webkit-appearance: none;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
   padding: 0;
-  color: #fff;
+  color: hide;
   font-style: normal;
   font-size: 35px;
   font-family: Arial, Baskerville, monospace;
@@ -132,6 +131,7 @@
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+
 .lity-close::-moz-focus-inner {
   border: 0;
   padding: 0;
@@ -191,8 +191,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-          box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 1);
   background: #000;
 }
 .lity-hide {

@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="cssSheets/style-main.css">
+<link rel="stylesheet" type="text/css" href="javaPlugins/slick-1.6.0/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="javaPlugins/slick-1.6.0/slick/slick-theme.css">
+<title>new_filmdetails</title>
+</head>
+
+<body>
+
+<div id="preloader">
+    <div id="status"></div>
+</div>
+
+<div class="pageWrapper">
+
+	<div class="header">
+		<div class="logo">
+			<p id="logotext"> GRANT JOHNSON / <span>cinematographer</span> </p>
+		</div>
+		<div class="pages">
+			<a href="Films.html"> FILMS </a>
+			<a href="Photos.html"> PHOTOS </a>
+			<a href="About.html"> ABOUT </a>
+		</div>	
+	</div>
+
+	<div class="footer">
+		<div class="email">
+			<p> grantgtj@gmail.com </p>
+		</div>
+		<div class="socialIcons">
+			<a href="mailto:grantgtj@gmail.com">
+			<img src="media/General/socialBadges/email_white.png">
+			</a>	
+			<a href="https://www.instagram.com/grantgtj/" target="_top">
+			<img src="media/General/socialBadges/instagram_white.png">
+			</a>
+			<a href="https://vimeo.com/grantjohnson" target="_top">
+			<img src="media/General/socialBadges/vimeo_white.png">
+			</a>
+	</div>
+</div>
+
+
+
+<script src="javaPlugins/jquery-2.2.0.min.js" type="text/javascript"> </script>
+<script src="javaPlugins/slick-1.6.0/slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+    $(document).on('ready', function() {	
+ $(".center").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  fade: true,
+  asNavFor: '.slider-nav'
+});
+$(".slider-nav").slick({
+  infinite: true,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  asNavFor: '.center',
+  focusOnSelect: true,
+	arrows: false,
+});
+    });
+  </script>
+
+<script>
+    //<![CDATA[
+        $(window).on('load', function() { 
+            $('#status').fadeOut(); 
+            $('#preloader').delay(350).fadeOut('slow'); 
+            $('body').delay(350).css({'overflow':'scroll'});
+        })
+    //]]>
+</script> 
+
+
+
+
+</body>
+</html>
