@@ -1,61 +1,39 @@
 @charset "UTF-8";
 /* CSS Document */
 
-@import url(rawline.css);
-
 @font-face {
-	font-family: ostrichsans-inline;
-    src: url(../media/Fonts/OstrichSansInline-Regular.otf);
+	font-family: montserrat-regular;
+    src: url(../media/Fonts/montserrat/Montserrat-Regular.otf);
 }
 
 @font-face {
-	font-family: ostrichsans-light;
-    src: url(../media/Fonts/OstrichSans-Light.otf);
+	font-family: montserrat-bold;
+    src: url(../media/Fonts/montserrat/Montserrat-Bold.otf);
 }
 
 @font-face {
-	font-family: ostrichsans-medium;
-    src: url(../media/Fonts/OstrichSans-Medium.otf);
+	font-family: montserrat-light;
+    src: url(../media/Fonts/montserrat/Montserrat-Light.otf);
 }
 
 @font-face {
-	font-family: ostrichsans-regular;
-    src: url(../media/Fonts/ostrich-sans-regular.ttf);
+	font-family: montserrat-extralight;
+    src: url(../media/Fonts/montserrat/Montserrat-ExtraLight.otf);
 }
 
-
-@media only screen and (min-width: 640px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
+@font-face {
+	font-family: montserrat-thin;
+    src: url(../media/Fonts/montserrat/Montserrat-Thin.otf);
 }
 
-
-[class*="col-"] {
-    float: left;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: scroll;
+@font-face {
+	font-family: quantify;
+	src: url(../media/Fonts/quantify.otf);
 }
 
 * {
-	font-family: 'rawline', sans-serif;
-	font-weight: 500;
+	font-family: montserrat-light;
 }
-
 
 html, body {
 	margin: 0;
@@ -97,7 +75,6 @@ html, body {
 	z-index:99999999; /* makes sure it stays on top */
 }
 
-
 #status{
     width: 20px;
     height: 24px;
@@ -109,10 +86,12 @@ html, body {
 	margin: -10px 0 0 -12px;
 	
 }
+
 #status:after, #status:before{
     position: absolute;
     content: "";
 }
+
 #status:after{
     width: 5px;
     height: 12px;
@@ -121,6 +100,7 @@ html, body {
     border-radius: 0px 20px 20px 0px;
     left: 20px;
 }
+
 #status:before{
     width: 1px;
     height: 6px;
@@ -139,10 +119,12 @@ html, body {
     0%{height: 0px;}
     100%{height: 6px;}            
 }
+
 @-moz-keyframes steam{
     0%{height: 0px}
     100%{height: 6px;}            
 }
+
 @keyframes steam{
     0%{height: 0px}
     100%{height: 6px;}            
@@ -151,7 +133,7 @@ html, body {
 /* HEADER */
 
 .header {
-	z-index:100;
+	z-index:1000;
 	width:90%;
 	height: 100px;
 	margin-left:auto;
@@ -167,24 +149,26 @@ html, body {
 	justify-content:flex-start;
 }
 
-.logo p{
+.logo a{
 	text-decoration: none;
-	font-size: 30px;
+	font-size: 20px;
 	color: rgba(216,216,216,1.00);
-	font-family: ostrichsans-inline;
+	font-family: quantify;
 	transform: translateX(15px);
 }
 
-.logo p span{
-	font-family: ostrichsans-regular;
+.logo a span{
+	font-family: montserrat-extralight;
+	letter-spacing: 1.3px;
+	font-size: 15px;
 }
 
 .pages {
 	float: left;
-	height: 100%;
 	width: 50%;
+	height: 100%;
 	display: flex;
-	align-items: center;
+	align-items:center;
 	justify-content:flex-end;
 }
 
@@ -192,8 +176,7 @@ html, body {
 	text-decoration: none;
 	color: rgba(216,216,216,1.00);
 	font-size: 15px;
-	font-family: 'rawline', sans-serif; 
-	font-weight: 600;
+	font-family: montserrat-regular;
 	margin: 15px;
 	text-align: center;
 }
@@ -205,25 +188,33 @@ html, body {
 	.logo {
 		width: 100%;
 		justify-content: center;
-		height:90%;
+		height:100%;
 	}
 
-	.logo p{
+	.logo a{
 		margin-left: 0%;
-		font-size: 28px;
+		font-size: 22px;
 		transform: translateX(0px);
+		text-align: center;
+		line-height: 22px;
 	}
+	
+	.logo a span {
+		font-size: 14px;
+		text-align: center;
+	}
+
 	.pages {
 		width: 100%;
 		justify-content: center;
-		height: 50%;
+		height: 20%;
+		padding-bottom: 20px;
 	}
+	
 	.pages a {
-		height: 100%;
-		transform: translateX(8px);
+		font-size: 15px;
 	}
 }
-
 
 /* FOOTER */
 
@@ -309,8 +300,6 @@ html, body {
     transform: translate(-50%,60px);
 	text-align:center;
 	z-index: 100;
-	font-family: 'rawline', sans-serif;
-	font-weight: 300;
 	font-size: 14px;
 	padding: 0 5px;
 	-webkit-transition: color 0.3s;

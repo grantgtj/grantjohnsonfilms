@@ -6,6 +6,7 @@ function resize(){
 	$("#PuntaIslita").attr('src', "media/Photos/PuntaIslita/Thumbnails/thumblarge.jpg");
 	$("#JoshuaTree").attr('src', "media/Photos/JoshuaTree/Thumbnails/thumblarge.jpg");
 	$("#TheTroupe").attr('src', "media/Photos/TheTroupe/Thumbnails/thumblarge.jpg");
+		
   } else {
    $("#SouthernCalifornia").attr('src', "media/Photos/SouthernCalifornia/Thumbnails/thumb.jpg");
 	$("#NewYork").attr('src', "media/Photos/NewYork/Thumbnails/thumb.jpg");

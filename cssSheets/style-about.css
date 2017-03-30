@@ -1,0 +1,358 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+	font-family: montserrat-regular;
+    src: url(../media/Fonts/montserrat/Montserrat-Regular.otf);
+}
+
+@font-face {
+	font-family: montserrat-bold;
+    src: url(../media/Fonts/montserrat/Montserrat-Bold.otf);
+}
+
+@font-face {
+	font-family: montserrat-light;
+    src: url(../media/Fonts/montserrat/Montserrat-Light.otf);
+}
+
+@font-face {
+	font-family: montserrat-extralight;
+    src: url(../media/Fonts/montserrat/Montserrat-ExtraLight.otf);
+}
+
+@font-face {
+	font-family: montserrat-thin;
+    src: url(../media/Fonts/montserrat/Montserrat-Thin.otf);
+}
+
+@font-face {
+	font-family: quantify;
+	src: url(../media/Fonts/quantify.otf);
+}
+
+* {
+	font-family: montserrat-light;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow:hidden;
+	background: url("../media/About/test.png") no-repeat top right fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@media screen and (max-width:768px) , screen and (max-height: 736)  {
+	html, body {
+	background: rgba(15,15,15,1.00) 
+	}
+}
+
+.pageWrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+/* Preloader */
+
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(9,9,9,1.00); /* change if the mask should be a color other than white */
+	z-index:99999999; /* makes sure it stays on top */
+}
+
+#status{
+    width: 20px;
+    height: 24px;
+    border: 1px rgba(255,255,255,1) solid;
+    border-radius: 0px 0px 5px 5px;
+	position:absolute;
+	left:50%; /* centers the loading animation horizontally on the screen */
+	top:50%;
+	margin: -10px 0 0 -12px;
+	
+}
+
+#status:after, #status:before{
+    position: absolute;
+    content: "";
+}
+
+#status:after{
+    width: 5px;
+    height: 12px;
+    border: 1px #fff solid;
+    border-left: none;
+    border-radius: 0px 20px 20px 0px;
+    left: 20px;
+}
+
+#status:before{
+    width: 1px;
+    height: 6px;
+    background-color: rgba(255,255,255,1);
+    top: -10px;
+    left: 4px;
+    box-shadow: 5px 0px 0px 0px rgba(255,255,255,1),
+                5px -5px 0px 0px rgba(255,255,255,1),
+                10px 0px 0px 0px rgba(255,255,255,1);
+    -webkit-animation: steam 1s linear infinite alternate;
+       -moz-animation: steam 1s linear infinite alternate;
+            animation: steam 1s linear infinite alternate;
+}
+
+@-webkit-keyframes steam{
+    0%{height: 0px;}
+    100%{height: 6px;}            
+}
+
+@-moz-keyframes steam{
+    0%{height: 0px}
+    100%{height: 6px;}            
+}
+
+@keyframes steam{
+    0%{height: 0px}
+    100%{height: 6px;}            
+}
+
+/* HEADER */
+
+.header {
+	z-index:1000;
+	width:90%;
+	height: 100px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.logo {
+	float: left;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+
+.logo a{
+	text-decoration: none;
+	font-size: 22px;
+	color: rgba(216,216,216,1.00);
+	font-family: quantify;
+	transform: translateX(15px);
+	line-height: 22px;
+}
+
+.logo a span{
+	font-family: montserrat-extralight;
+	letter-spacing: 1.3px;
+	font-size: 15px;
+}
+
+.pages {
+	float: left;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items:center;
+	justify-content:flex-end;
+}
+
+.pages a{
+	text-decoration: none;
+	color: rgba(216,216,216,1.00);
+	font-size: 14px;
+	font-family: montserrat-regular;
+	margin: 15px;
+	text-align: center;
+}
+
+@media screen and (max-width:640px) {
+	.header {
+		width: 100%;
+	}
+	.logo {
+		width: 100%;
+		justify-content: center;
+		height:100%;
+	}
+
+	.logo a{
+		margin-left: 0%;
+		transform: translateX(0px);
+		text-align: center;
+	}
+	
+	.logo a span {
+		text-align: center;
+	}
+
+	.pages {
+		width: 100%;
+		justify-content: center;
+		height: 20%;
+		padding-bottom: 20px;
+	}
+}
+
+/* FOOTER */
+
+.footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index:100;
+	width:90%;
+	height: 100px;
+	margin-left:auto;
+	margin-right:auto;
+	display: table-footer-group;
+}
+
+.email {
+	float: left;
+	width: 50%;
+	height: 100%;
+	display: flex;
+	align-items:center;
+	justify-content:flex-start;
+}
+
+.email p {
+	text-decoration: none;
+	font-size: 12px;
+	color: rgba(210,210,210,1.00);
+	transform: translateX(15px);
+	font-style: italic;
+
+}
+.socialIcons {
+	float: left;
+	height: 100%;
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content:flex-end;
+}
+
+.socialIcons img {
+	height: 22px;
+	margin: 3px;
+	transform: translateX(-12px);
+}
+
+
+@media screen and (max-width:640px) {
+	.footer {
+		width: 100%;
+	}
+	.email {
+		width: 100%;
+		justify-content: center;
+		height:90%;
+	}
+
+	.email p{
+		transform: translateX(0px);
+	}
+	.socialIcons {
+		width: 100%;
+		justify-content: center;
+		height: 50%;
+	}
+	.socialIcons img {
+		margin: 6px;
+		transform: translate(0px,-20px);
+		height: 27px;
+	}
+}
+
+
+/* ABOUT ME PAGE ELEMENTS */
+
+.aboutTextBigWrapper {
+	width: 90%;
+	margin: 0 auto;
+	z-index: -100;
+}
+
+.aboutTextWrapper {
+	display: flex;
+	align-items: center;
+	height:calc(100% - 200px);
+	position: absolute;
+	top:100px;
+}
+
+
+.aboutText {
+	color: rgba(210,210,210,1.00);
+	width: 57%;
+	text-align: left;
+	margin: 15px;
+}
+
+
+.icon {
+	display: none;
+	margin-left:auto;
+	margin-right:auto;
+	width:100%;
+	height:auto;
+	text-align: center;
+}
+
+.icon img {
+	width:150px;
+}
+
+@media screen and (max-width:736px) , screen and (max-height: 736) { /* iPhone Portrait & Landscape */ 
+	.icon {
+		display: block;
+	}
+	.aboutTextWrapper {
+		position: relative;
+		top: auto;
+	}
+	.aboutText {
+		text-align: center;
+		width: 100%;
+		margin: 15px;
+		margin-bottom: 100px;
+	}
+}
+
+@media screen and (min-width:737px) and (orientation: portrait) {
+	body, html {
+		background:rgba(15,15,15,1.00);
+	}
+	.icon {
+		display: block;
+	}
+	
+	.aboutTextBigWrapper {
+		width: 80%;
+		justify-content: center;
+	}
+	.aboutTextWrapper {
+		position: relative;
+		top: auto;
+	}
+	.aboutText {
+		text-align: center;
+		width: 100%;
+		margin: 15px;
+		margin-bottom: 100px;
+	}
+}
