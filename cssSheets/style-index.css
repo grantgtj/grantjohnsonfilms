@@ -151,10 +151,10 @@ html, body {
 
 .logo a{
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 22px;
 	color: rgba(216,216,216,1.00);
 	font-family: quantify;
-	transform: translateX(15px);
+	line-height: 22px;
 }
 
 .logo a span{
@@ -175,10 +175,10 @@ html, body {
 .pages a{
 	text-decoration: none;
 	color: rgba(216,216,216,1.00);
-	font-size: 15px;
+	font-size: 14px;
 	font-family: montserrat-regular;
-	margin: 15px;
 	text-align: center;
+	padding-left: 30px;
 }
 
 @media screen and (max-width:640px) {
@@ -193,14 +193,11 @@ html, body {
 
 	.logo a{
 		margin-left: 0%;
-		font-size: 22px;
 		transform: translateX(0px);
 		text-align: center;
-		line-height: 22px;
 	}
 	
 	.logo a span {
-		font-size: 14px;
 		text-align: center;
 	}
 
@@ -210,9 +207,8 @@ html, body {
 		height: 20%;
 		padding-bottom: 20px;
 	}
-	
 	.pages a {
-		font-size: 15px;
+		padding: 15px;
 	}
 }
 
@@ -228,6 +224,7 @@ html, body {
 	height: 100px;
 	margin-left:auto;
 	margin-right:auto;
+	display: table-footer-group;
 }
 
 .email {
@@ -242,8 +239,7 @@ html, body {
 .email p {
 	text-decoration: none;
 	font-size: 12px;
-	color: rgba(216,216,216,1.00);
-	transform: translateX(15px);
+	color: rgba(210,210,210,1.00);
 	font-style: italic;
 
 }
@@ -258,33 +254,32 @@ html, body {
 
 .socialIcons img {
 	height: 22px;
-	margin: 3px;
-	transform: translateX(-12px);
+	padding-left: 6px;
 }
 
 
 @media screen and (max-width:640px) {
 	.footer {
 		width: 100%;
+		height: 80px;
+		padding-bottom: 20px;
 	}
 	.email {
 		width: 100%;
 		justify-content: center;
-		height:90%;
+		height:60%;
 		visibility: hidden;
 	}
-
 	.email p{
 		transform: translateX(0px);
 	}
 	.socialIcons {
 		width: 100%;
 		justify-content: center;
-		height: 50%;
+		height: 70%;
 	}
 	.socialIcons img {
-		margin: 6px;
-		transform: translate(0px,-40px);
+		padding: 0px 5px 10px 5px;
 		height: 27px;
 	}
 }

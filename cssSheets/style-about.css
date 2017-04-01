@@ -149,7 +149,6 @@ html, body {
 	font-size: 22px;
 	color: rgba(216,216,216,1.00);
 	font-family: quantify;
-	transform: translateX(15px);
 	line-height: 22px;
 }
 
@@ -173,8 +172,8 @@ html, body {
 	color: rgba(216,216,216,1.00);
 	font-size: 14px;
 	font-family: montserrat-regular;
-	margin: 15px;
 	text-align: center;
+	padding-left: 30px;
 }
 
 @media screen and (max-width:640px) {
@@ -203,6 +202,9 @@ html, body {
 		height: 20%;
 		padding-bottom: 20px;
 	}
+	.pages a {
+		padding: 15px;
+	}
 }
 
 /* FOOTER */
@@ -218,6 +220,7 @@ html, body {
 	margin-left:auto;
 	margin-right:auto;
 	display: table-footer-group;
+	background-color: rgba(15,15,15,1.00);
 }
 
 .email {
@@ -233,7 +236,6 @@ html, body {
 	text-decoration: none;
 	font-size: 12px;
 	color: rgba(210,210,210,1.00);
-	transform: translateX(15px);
 	font-style: italic;
 
 }
@@ -248,36 +250,33 @@ html, body {
 
 .socialIcons img {
 	height: 22px;
-	margin: 3px;
-	transform: translateX(-12px);
+	padding-left: 6px;
 }
 
 
 @media screen and (max-width:640px) {
 	.footer {
 		width: 100%;
+		height: 80px;
 	}
 	.email {
 		width: 100%;
 		justify-content: center;
-		height:90%;
+		height:60%;
 	}
-
 	.email p{
 		transform: translateX(0px);
 	}
 	.socialIcons {
 		width: 100%;
 		justify-content: center;
-		height: 50%;
+		height: 70%;
 	}
 	.socialIcons img {
-		margin: 6px;
-		transform: translate(0px,-20px);
+		padding: 0px 5px 10px 5px;
 		height: 27px;
 	}
 }
-
 
 /* ABOUT ME PAGE ELEMENTS */
 
@@ -285,14 +284,12 @@ html, body {
 	width: 90%;
 	margin: 0 auto;
 	z-index: -100;
+	height: 100%;
 }
 
 .aboutTextWrapper {
 	display: flex;
-	align-items: center;
-	height:calc(100% - 200px);
-	position: absolute;
-	top:100px;
+	height: calc(100vh - 200px);
 }
 
 
@@ -301,6 +298,9 @@ html, body {
 	width: 57%;
 	text-align: left;
 	margin: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 
@@ -321,9 +321,14 @@ html, body {
 	.icon {
 		display: block;
 	}
+	
+	.icon img {
+		padding-top: 7px;
+	}
 	.aboutTextWrapper {
 		position: relative;
 		top: auto;
+		height: auto;
 	}
 	.aboutText {
 		text-align: center;
@@ -338,21 +343,49 @@ html, body {
 		background:rgba(15,15,15,1.00);
 	}
 	.icon {
-		display: block;
+		display: flex;
+		justify-content: center;
+		align-content:center;
+	}
+	
+	.icon img {
+		width: 100%;
+		height: 100%;
+		padding-top: 7px;
+	}
+	.aboutContent {
+		height: calc(100vh - 200px);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 	
 	.aboutTextBigWrapper {
 		width: 80%;
 		justify-content: center;
+		height: auto;
+		padding-top: 25px;
 	}
+	
 	.aboutTextWrapper {
 		position: relative;
 		top: auto;
+		display:flex;
+		justify-content: center;
+		align-content: center;
+		height: auto;
 	}
 	.aboutText {
 		text-align: center;
 		width: 100%;
-		margin: 15px;
-		margin-bottom: 100px;
+	}
+}
+
+@media screen and (min-width:1024px) and (orientation: portrait) {
+	.aboutTextBigWrapper {
+		width: 80%;
+		justify-content: center;
+		height: auto;
+		padding-top: 100px;
 	}
 }

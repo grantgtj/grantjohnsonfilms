@@ -74,14 +74,16 @@
 			</div>
 		  </div>	
 		</div>
-		<div class="filmInfo">
-			<p> The standard Lorem Ipsum passage, used since the 1500s
-
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-				Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC </p>
+		<div class="filmInfoContainer">
+			<div class="filmInfo">
+			<p>
+				<span id="Title">Lapse</span> <br>
+				<span id="Subtitle">(Short Film, 2016)</span> <br> <br>
+				Lapse is an NYU thesis film directed by Maya Goldberg. <br> <br>
+				<span id="Camera"> Camera: </span> ARRI Alexa <br>
+				<span id="Optics"> Optics: </span> Panavision Primo Series Lenses </p>
+			</div>
 		</div>
-		
 	</div>
 	
 	<div class="footer">
@@ -109,21 +111,34 @@
 <script type="text/javascript">
     $(document).on('ready', function() {
       $('.slider-for').slick({
-		  slidesToShow: 1,
+	      slidesToShow: 1,
 		  slidesToScroll: 1,
-		  arrows: true,
+		  arrows: false,
 		  fade: true,
 		  asNavFor: '.slider-nav'
 	  });
-	  $('.slider-nav').slick({
+	  if (screen.width < 1024) {
+		  $('.slider-nav').slick({
+		  slidesToShow: 3,
+		  slidesToScroll: 1,
+		  asNavFor: '.slider-for',
+		  dots: false,
+		  arrows: true,
+		  centerMode: false,
+		  focusOnSelect: true
+		});
+	  }
+	  else {
+		  $('.slider-nav').slick({
 		  slidesToShow: 5,
 		  slidesToScroll: 1,
 		  asNavFor: '.slider-for',
 		  dots: false,
-		  arrows: false,
+		  arrows: true,
 		  centerMode: false,
 		  focusOnSelect: true
 		});
+	  }
     });
   </script>
 

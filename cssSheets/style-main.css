@@ -12,6 +12,11 @@
 }
 
 @font-face {
+	font-family: montserrat-semibold;
+    src: url(../media/Fonts/montserrat/Montserrat-SemiBold.otf);
+}
+
+@font-face {
 	font-family: montserrat-light;
     src: url(../media/Fonts/montserrat/Montserrat-Light.otf);
 }
@@ -142,7 +147,6 @@ body {
 	font-size: 22px;
 	color: rgba(216,216,216,1.00);
 	font-family: quantify;
-	transform: translateX(15px);
 	line-height: 22px;
 }
 
@@ -166,8 +170,8 @@ body {
 	color: rgba(216,216,216,1.00);
 	font-size: 14px;
 	font-family: montserrat-regular;
-	margin: 15px;
 	text-align: center;
+	padding-left: 30px;
 }
 
 @media screen and (max-width:640px) {
@@ -196,13 +200,15 @@ body {
 		height: 20%;
 		padding-bottom: 20px;
 	}
+	.pages a {
+		padding: 15px;
+	}
 }
 
 /* FOOTER */
 
 .footer {
 	position: absolute;
-	background: rgba(15,15,15,1.00);
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -212,6 +218,7 @@ body {
 	margin-left:auto;
 	margin-right:auto;
 	display: table-footer-group;
+	background-color: rgba(15,15,15,1.00);
 }
 
 .email {
@@ -221,14 +228,12 @@ body {
 	display: flex;
 	align-items:center;
 	justify-content:flex-start;
-	background: rgba(15,15,15,1.00);
 }
 
 .email p {
 	text-decoration: none;
 	font-size: 12px;
 	color: rgba(210,210,210,1.00);
-	transform: translateX(15px);
 	font-style: italic;
 
 }
@@ -239,37 +244,34 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content:flex-end;
-	background: rgba(15,15,15,1.00);
 }
 
 .socialIcons img {
 	height: 22px;
-	margin: 3px;
-	transform: translateX(-12px);
+	padding-left: 6px;
 }
 
 
 @media screen and (max-width:640px) {
 	.footer {
 		width: 100%;
+		height: 80px;
 	}
 	.email {
 		width: 100%;
 		justify-content: center;
-		height:90%;
+		height:60%;
 	}
-
 	.email p{
 		transform: translateX(0px);
 	}
 	.socialIcons {
 		width: 100%;
 		justify-content: center;
-		height: 50%;
+		height: 70%;
 	}
 	.socialIcons img {
-		margin: 6px;
-		transform: translate(0px,-20px);
+		padding: 0px 5px 10px 5px;
 		height: 27px;
 	}
 }
@@ -292,22 +294,22 @@ body {
     padding:0;
     font-size:0;
     list-style:none;
-	width: 90%;
+	width: calc(90% + 30px);
 	background: rgba(15,15,15,1.00);
 	margin-left: auto;
 	margin-right: auto;
 	
 }
+
 #filmsGrid li {
     display: inline-block;
     *display:inline;
-    width:25%;
+    width:33.33%;
     vertical-align:middle;
     box-sizing:border-box;
     margin:0;
     padding:0;
-}
-        
+}      
 
 .filmsGrid-cell {
     display:block;
@@ -315,7 +317,6 @@ body {
 	margin: 15px;
 }
         
-
 .filmsGrid-img {
     display:block;
     width: 100%;
@@ -348,14 +349,15 @@ body {
     opacity:1;
 }
 
-@media (max-width: 1400px) {
-    #filmsGrid li {
-        width:33.33%;
+
+@media (max-width: 1024px) {
+	#filmsGrid li {
+        width:50%;
     }
 }
 
-@media (max-width: 1024px) {
-    #filmsGrid li {
+@media (max-width: 1366px) and (orientation: landscape) {
+	#filmsGrid li {
         width:50%;
     }
 }
@@ -368,10 +370,7 @@ body {
         width:100%;
     }
 	.filmsGrid-cell {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin: 15px 0px 15px 0px;
 	}
 }	
 
@@ -396,8 +395,8 @@ body {
 }
 
 .slider-for{
-	width:90%;
-	height:70%;
+	width:100%;
+	height:auto;
 	margin: 0 auto;
 }
 
@@ -408,50 +407,86 @@ body {
 
 .slider-for div img{
 	margin: 0 auto;
-	width:auto;
-	height:100%;
+	width:100%;
+	height:auto;
+	max-height: 100%;
 }
 
 .slider-nav {
-	width:90%;
+	width:70%;
 	height:auto;
+	margin: 0 auto;
 }
 
 .slider-nav div{
 	height:auto;
-	width: 100%;
+	width: auto;
 }
 
 .slider-nav div img{
 	height:auto;
 	width: 100%;
+	max-height: 100%;
+	top: 0;
 }
 
-.filmInfo {
+.filmInfoContainer {
 	order:0;
 	width: 30%;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+}
+
+.filmInfoContainer p {
+	color: white;
+}
+
+.filmInfo {
+	text-align: center;
 }
 
 .filmInfo p {
-	color: white;
+	font-size: 13px;
 }
+
+#Title {
+	font-family: montserrat-semibold;
+	font-size: 25px;
+}
+
+#Subtitle {
+	font-family: montserrat-extralight;
+}
+
+#Camera {
+	font-family: montserrat-regular;
+}
+
+#Optics {
+	font-family: montserrat-regular;
+}
+
 
 @media (max-width: 1024px) {
 	.filmDetails {
 		flex-direction: column;
+		height: auto;
 		padding-bottom: 100px;
 	}
 	.filmGallery {
 		order: 0;
 		width: 100%;
-		background-color: red;
+		justify-content: flex-start;
+		height: auto;
 	}
-	.filmInfo {
+	.filmInfoContainer {
 		order: 1;
 		width: 100%;
+		justify-content: center;
+		height: auto;
 	}
+
 	.slider-for div img{
 		width:100%;
 		height: auto;
@@ -479,7 +514,7 @@ body {
     padding:0;
     font-size:0;
     list-style:none;
-	width: 90%;
+	width: calc(90% + 30px);
 	background: rgba(15,15,15,1.00);
 	margin-left: auto;
 	margin-right: auto;
@@ -538,28 +573,27 @@ body {
     opacity:1;
 }
 
-
-
 @media (max-width: 1024px) {
+	
     #photosGrid li {
         width:100%;
-		
     }
-	
-	#photosGrid {
-        width:100%;
-    }
-	
-	.photosGrid-cell {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
 	.photosGrid-text {
 		background-color:rgba(0,0,0,0.30);
 	}
 }
+
+@media (max-width: 640px) {
+    #photosGrid li {
+        width:100%;
+    }
+	#photosGrid {
+        width:100%;
+    }
+	.photosGrid-cell {
+	margin: 15px 0px 15px 0px;
+	}
+}	
 
 /* PHOTO ALBUM PAGE  */ 
 
@@ -683,37 +717,6 @@ body {
 	}
 }
 	
-
-#Title {
-	font-family: 'rawline', sans-serif;
-	color: rgba(210,210,210,1.00);
-	font-weight: 700;
-	font-size: 25px;
-	margin-bottom: 15px;
-	margin-top: 15px;
-}
-
-
-#Summary {
-	font-size: 13px;
-	margin-bottom: 15px;
-	margin-top: 15px;
-	color: rgba(210,210,210,1.00);
-}
-
-
-@media (max-width: 640px) {
-	#Title {
-	display: none;
-	}
-	
-	#Summary {
-	font-size: 10px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%
-}
-}
 
 /* ABOUT ME PAGE ELEMENTS */
 
