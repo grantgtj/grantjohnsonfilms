@@ -33,6 +33,9 @@
 
 * {
 	font-family: montserrat-light;
+	font-size: 13px;
+	color: rgba(216,216,216,1.00);
+	line-height: 20px;
 }
 
 html, body {
@@ -40,7 +43,7 @@ html, body {
 	padding: 0;
 	height: 100%;
 	overflow:hidden;
-	background: url("../media/About/test.png") no-repeat top right fixed;
+	background: url("../media/About/background.jpg") no-repeat top right fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -56,6 +59,16 @@ html, body {
 .pageWrapper {
 	min-height: 100%;
 	position: relative;
+}
+
+.header a:hover {
+	color:rgba(139,139,139,1.00);
+	transition: .3s;
+}
+
+.footer img:hover {
+	opacity: .5;
+	transition: .3s;
 }
 
 /* Preloader */
@@ -207,6 +220,10 @@ html, body {
 	}
 }
 
+#Selected {
+	color:rgba(139,139,139,1.00);
+}
+
 /* FOOTER */
 
 .footer {
@@ -220,7 +237,6 @@ html, body {
 	margin-left:auto;
 	margin-right:auto;
 	display: table-footer-group;
-	background-color: rgba(15,15,15,1.00);
 }
 
 .email {
@@ -295,9 +311,8 @@ html, body {
 
 .aboutText {
 	color: rgba(210,210,210,1.00);
-	width: 57%;
+	width: 65%;
 	text-align: left;
-	margin: 15px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -323,7 +338,7 @@ html, body {
 	}
 	
 	.icon img {
-		padding-top: 7px;
+		padding-top: 15px;
 	}
 	.aboutTextWrapper {
 		position: relative;
@@ -351,7 +366,7 @@ html, body {
 	.icon img {
 		width: 100%;
 		height: 100%;
-		padding-top: 7px;
+		padding-top: 15px;
 	}
 	.aboutContent {
 		height: calc(100vh - 200px);

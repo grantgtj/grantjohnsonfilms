@@ -3,7 +3,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="cssSheets/style-main.css">
 <meta charset="UTF-8">
-<title>Photos</title>
+<title>Grant Johnson Films</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 		</div>
 		<div class="pages">
 			<a href="Films.html"> FILMS </a>
-			<a href="Photos.html"> PHOTOS </a>
+			<a id="Selected" href="Photos.html"> PHOTOS </a>
 			<a href="About.html"> ABOUT </a>
 		</div>	
 	</div>
@@ -30,9 +30,7 @@
 				<li>
 					<a class="photosGrid-cell" href="SouthernCalifornia.html">
 						<img class="photosGrid-img" id="SouthernCalifornia" src="media/Photos/SouthernCalifornia/Thumbnails/thumb.jpg"/>
-						<div class="photosGrid-text">
-							<span>Southern California</span>
-						</div>
+						<span class="photosGrid-text">Southern California</span>
 					</a>
 				</li>
 				<li>
@@ -88,6 +86,22 @@
 </div>
 
 <script src="javaPlugins/jquery-3.1.1.js"></script>
+
+
+<script type="text/javascript">
+    $(window).on('load', function() {
+		if (screen.width < 640) {
+			$("#SouthernCalifornia").attr('src', "media/Photos/SouthernCalifornia/Thumbnails/thumblarge.jpg");
+			$("#NewYork").attr('src', "media/Photos/NewYork/Thumbnails/thumblarge.jpg");
+			$("#Connecticut").attr('src', "media/Photos/Connecticut/Thumbnails/thumblarge.jpg");
+		}
+		else {
+		    $("#SouthernCalifornia").attr('src', "media/Photos/SouthernCalifornia/Thumbnails/thumb.jpg");
+			$("#NewYork").attr('src', "media/Photos/NewYork/Thumbnails/thumb.jpg");
+			$("#Connecticut").attr('src', "media/Photos/Connecticut/Thumbnails/thumb.jpg");
+		}
+	});	
+</script>
 
 <script>
     //<![CDATA[

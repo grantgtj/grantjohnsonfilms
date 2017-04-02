@@ -38,6 +38,9 @@
 
 * {
 	font-family: montserrat-light;
+	font-size: 13px;
+	color: rgba(216,216,216,1.00);
+	line-height: 20px;
 }
 
 html, body {
@@ -51,9 +54,21 @@ body {
 	overflow: hidden;
 }
 
+
 .pageWrapper {
 	min-height: 100%;
 	position: relative;
+}
+
+
+.header a:hover {
+	color:rgba(139,139,139,1.00);
+	transition: .3s;
+}
+
+.footer img:hover {
+	opacity: .5;
+	transition: .3s;
 }
 
 /* Preloader */
@@ -76,8 +91,7 @@ body {
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
 	top:50%;
-	margin: -10px 0 0 -12px;
-	
+	margin: -10px 0 0 -12px;	
 }
 
 #status:after, #status:before{
@@ -205,6 +219,10 @@ body {
 	}
 }
 
+#Selected {
+	color:rgba(139,139,139,1.00);
+}
+
 /* FOOTER */
 
 .footer {
@@ -326,23 +344,25 @@ body {
 }
    
 .filmsGrid-text {
-    display:block;
+     display:flex;
+    padding:0 30px;
     box-sizing:border-box;
     position:absolute;
     left:0;
+	top: 0;
     width:100%;
+	height: 100%;
     text-align:center;
-    text-transform:capitalize;
     font-size:18px;
-    bottom: 0;
+    font-weight: bold;
+	justify-content: center;
+	align-items: center;
     color: rgba(210,210,210,1.00);
     opacity:0;
+    filter:alpha(opacity=0);
+    transform:translateY(0px);
     transition:all .5s;
-	transition-timing-function: ease;
-	background-color: rgba(0,0,0,0.6);
-	padding: 5px 0px 5px 0px;
-	font-family: 'rawline', sans-serif;
-	font-weight: 200;	
+	background-color:rgba(0,0,0,0.30);
 }
 
 #filmsGrid li:hover .filmsGrid-text {
@@ -381,6 +401,8 @@ body {
 	display:flex;
 	width: 90%;
 	margin: 0 auto;
+	padding-top: 10px;
+	justify-content: center;
 }
 
 .filmGallery {
@@ -395,7 +417,7 @@ body {
 }
 
 .slider-for{
-	width:100%;
+	width:90%;
 	height:auto;
 	margin: 0 auto;
 }
@@ -410,6 +432,11 @@ body {
 	width:100%;
 	height:auto;
 	max-height: 100%;
+}
+
+.slider-for div iframe{
+	margin: 0 auto;
+	height:100%;
 }
 
 .slider-nav {
@@ -438,17 +465,11 @@ body {
 	justify-content: center;
 }
 
-.filmInfoContainer p {
-	color: white;
-}
-
 .filmInfo {
 	text-align: center;
+	width: 90%;
 }
 
-.filmInfo p {
-	font-size: 13px;
-}
 
 #Title {
 	font-family: montserrat-semibold;
@@ -457,6 +478,10 @@ body {
 
 #Subtitle {
 	font-family: montserrat-extralight;
+}
+
+#titleItalics {
+	font-style: italic; 
 }
 
 #Camera {
@@ -472,12 +497,13 @@ body {
 	.filmDetails {
 		flex-direction: column;
 		height: auto;
+		width: 100%;
 		padding-bottom: 100px;
 	}
 	.filmGallery {
 		order: 0;
 		width: 100%;
-		justify-content: flex-start;
+		justify-content: center;
 		height: auto;
 	}
 	.filmInfoContainer {
@@ -485,6 +511,7 @@ body {
 		width: 100%;
 		justify-content: center;
 		height: auto;
+		padding-top: 25px;
 	}
 
 	.slider-for div img{
@@ -496,6 +523,22 @@ body {
 		height: auto;
 	}
 }
+
+@media (max-width: 640px) and (orientation:portrait) {
+	.filmDetails {
+		width: 100%;
+	}
+	.slider-nav {
+		width: 80%;
+	}
+	.slider-for{
+		width: 100%;
+	}
+	.filmInfo {
+		width: 80%;
+	}
+}
+
 
 /*PHOTOS GRID PAGE */
 
@@ -579,7 +622,7 @@ body {
         width:100%;
     }
 	.photosGrid-text {
-		background-color:rgba(0,0,0,0.30);
+		background-color:rgba(0,0,0,.2);
 	}
 }
 
@@ -627,8 +670,10 @@ body {
 
 .photosInfo {
 	width: 70%;
-	margin-left:auto; 
-	margin-right:auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .photosInfo p {
@@ -651,7 +696,7 @@ body {
     padding:0;
     font-size:0;
     list-style:none;
-	width: 90%;
+	width: calc(90% + 30px);
 	background: rgba(15,15,15,1.00);
 	margin-left: auto;
 	margin-right: auto;
@@ -708,12 +753,11 @@ body {
 	margin: 10px;
 	}
 	
-	.photosInfo {
-	display: table-row-group;
-	transform: translateY(-100px);
-	}
 	.photosAlbumGridBigWrapper {
 	display: table-header-group;
+	}
+	.photosInfo {
+		width: 90%;
 	}
 }
 	

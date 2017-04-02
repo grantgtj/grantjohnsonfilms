@@ -2,7 +2,6 @@
 .slick-slider {
   position: relative;
   display: block;
-	padding: 10px;
   box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -13,6 +12,12 @@
   -ms-touch-action: pan-y;
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent; }
+
+@media screen and (max-width:1024px) {
+	.slick-slider {
+		padding-left: 0;
+	}
+}
 
 .slick-list {
   position: relative;
@@ -69,6 +74,7 @@
     display: block;
     height: auto;
     border: 1px solid transparent; }
+
 
 .slick-arrow.slick-hidden {
   display: none; }
