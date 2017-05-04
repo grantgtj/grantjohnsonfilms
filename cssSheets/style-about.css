@@ -43,7 +43,7 @@ html, body {
 	padding: 0;
 	height: 100%;
 	overflow:hidden;
-	background: url("../media/About/background.jpg") no-repeat top right fixed;
+	background: url("../media/About/bg.jpg") no-repeat top right fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -62,7 +62,7 @@ html, body {
 }
 
 .header a:hover {
-	color:rgba(139,139,139,1.00);
+	color:rgba(92,92,92,1.00);
 	transition: .3s;
 }
 
@@ -182,7 +182,7 @@ html, body {
 
 .pages a{
 	text-decoration: none;
-	color: rgba(216,216,216,1.00);
+	color: rgba(15,15,15,1.00);
 	font-size: 14px;
 	font-family: montserrat-regular;
 	text-align: center;
@@ -220,8 +220,17 @@ html, body {
 	}
 }
 
-#Selected {
+@media screen and (max-width:1024px) {
+	.pages a {
+		color: rgba(216,216,216,1.00);
+	}
+	#Selected {
 	color:rgba(139,139,139,1.00);
+}
+}
+
+#Selected {
+	color:rgba(92,92,92,1.00);
 }
 
 /* FOOTER */
@@ -311,7 +320,7 @@ html, body {
 
 .aboutText {
 	color: rgba(210,210,210,1.00);
-	width: 65%;
+	width: 60%;
 	text-align: left;
 	display: flex;
 	align-items: center;

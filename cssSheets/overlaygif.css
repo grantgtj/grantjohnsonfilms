@@ -8,7 +8,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-	background: url(../media/Films/Unprotected/Thumbnails/test.gif) center;
+	background: url(../media/Films/Unprotected/unprotected.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
@@ -63,7 +63,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-	background: url(../media/Films/KateSpade/ks.gif) center;
+	background: url(../media/Films/KateSpade/katespade.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/

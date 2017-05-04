@@ -51,13 +51,13 @@
 		</div>
 		<div class="socialIcons">
 			<a href="mailto:grantgtj@gmail.com">
-			<img src="media/General/socialBadges/email_white.png">
+			<img id="email" src="media/General/socialBadges/email_black.png">
 			</a>	
 			<a href="https://www.instagram.com/grantgtj/" target="_top">
-			<img src="media/General/socialBadges/instagram_white.png">
+			<img id="instagram" src="media/General/socialBadges/instagram_black.png">
 			</a>
 			<a href="https://vimeo.com/grantjohnson" target="_top">
-			<img src="media/General/socialBadges/vimeo_white.png">
+			<img id="vimeo" src="media/General/socialBadges/vimeo_black.png">
 			</a>
 		</div>
 	</div>	
@@ -65,7 +65,6 @@
 </div>
 
 <script src="javaPlugins/jquery-3.1.1.js"></script>
-<script src="javaPlugins/gridresize.js"> </script>
 
 <script type="text/javascript">
     $(window).on('load', function() {
@@ -74,6 +73,17 @@
 		}
 		else {
 		    $(".iconsource").attr('src', "media/About/banner.jpg");
+		}
+		if (screen.width < 1025) {
+			$("#email").attr('src', "media/General/socialBadges/email_white.png");
+			$("#instagram").attr('src', "media/General/socialBadges/instagram_white.png");
+			$("#vimeo").attr('src', "media/General/socialBadges/vimeo_white.png");
+		}
+		else {
+		    $("#email").attr('src', "media/General/socialBadges/email_black.png");
+			$("#instagram").attr('src', "media/General/socialBadges/instagram_black.png");
+			$("#vimeo").attr('src', "media/General/socialBadges/vimeo_black.png");
+			 $(".iconsource").attr('src', "media/About/banner.jpg");
 		}
 	});	
 </script>
