@@ -29,37 +29,37 @@
 			<ul id="photosGrid">	
 				<li>
 					<a class="photosGrid-cell" href="SouthernCalifornia.html">
-						<img class="photosGrid-img" id="SouthernCalifornia" src="media/Photos/SouthernCalifornia/Thumbnails/thumb.jpg"/>
+						<img class="photosGrid-img" id="SouthernCalifornia" src="#"/>
 						<span class="photosGrid-text">Southern California</span>
 					</a>
 				</li>
 				<li>
 					<a class="photosGrid-cell" href="NewYork.html">
-						<img class="photosGrid-img" id="NewYork" src="media/Photos/NewYork/Thumbnails/thumb.jpg"/>
+						<img class="photosGrid-img" id="NewYork" src="#"/>
 						<span class="photosGrid-text">New York</span>
 					</a>
 				</li>		
 				<li>
 					<a class="photosGrid-cell" href="Connecticut.html">
-						<img class="photosGrid-img" id="Connecticut" src="media/Photos/Connecticut/Thumbnails/thumb.jpg"/>
+						<img class="photosGrid-img" id="Connecticut" src="#"/>
 						<span class="photosGrid-text">Connecticut</span>
 					</a>
 				</li>
 				<li>
 					<a class="photosGrid-cell" href="PuntaIslita.html">
-						<img class="photosGrid-img" id="PuntaIslita" src="media/Photos/PuntaIslita/Thumbnails/thumb.jpg"/>
+						<img class="photosGrid-img" id="PuntaIslita" src="#"/>
 						<span class="photosGrid-text">Punta Islita</span>
 					</a>
 				</li>
 				<li>
 					<a class="photosGrid-cell" href="JoshuaTree.html">
-						<img class="photosGrid-img" id="JoshuaTree" src="media/Photos/JoshuaTree/Thumbnails/thumb.jpg"/>
+						<img class="photosGrid-img" id="JoshuaTree" src="#"/>
 						<span class="photosGrid-text">Joshua Tree</span>
 					</a>
 				</li>
 				<li>
 					<a class="photosGrid-cell" href="TheTroupe.html">
-						<img class="photosGrid-img" id="TheTroupe" src="media/Photos/TheTroupe/Thumbnails/thumb.jpg"/>
+						<img class="photosGrid-img" id="TheTroupe" src="#"/>
 						<span class="photosGrid-text">The Troupe</span>
 					</a>
 				</li>
@@ -91,14 +91,21 @@
 <script type="text/javascript">
     $(window).on('load', function() {
 		if (screen.width < 640) {
-			$("#SouthernCalifornia").attr('src', "media/Photos/SouthernCalifornia/Thumbnails/thumblarge.jpg");
-			$("#NewYork").attr('src', "media/Photos/NewYork/Thumbnails/thumblarge.jpg");
-			$("#Connecticut").attr('src', "media/Photos/Connecticut/Thumbnails/thumblarge.jpg");
+			$("#SouthernCalifornia").attr('src', "media/Photos/SouthernCalifornia/thumblarge.jpg");
+			$("#NewYork").attr('src', "media/Photos/NewYork/thumblarge.jpg");
+			$("#Connecticut").attr('src', "media/Photos/Connecticut/thumblarge.jpg");
+			$("#PuntaIslita").attr('src', "media/Photos/PuntaIslita/thumblarge.jpg");
+			$("#JoshuaTree").attr('src', "media/Photos/JoshuaTree/thumblarge.jpg");
+			$("#TheTroupe").attr('src', "media/Photos/TheTroupe/thumblarge.jpg");
 		}
 		else {
-		    $("#SouthernCalifornia").attr('src', "media/Photos/SouthernCalifornia/Thumbnails/thumb.jpg");
-			$("#NewYork").attr('src', "media/Photos/NewYork/Thumbnails/thumb.jpg");
-			$("#Connecticut").attr('src', "media/Photos/Connecticut/Thumbnails/thumb.jpg");
+		    $("#SouthernCalifornia").attr('src', "media/Photos/SouthernCalifornia/thumb.jpg");
+			$("#NewYork").attr('src', "media/Photos/NewYork/thumb.jpg");
+			$("#Connecticut").attr('src', "media/Photos/Connecticut/thumb.jpg");
+			$("#PuntaIslita").attr('src', "media/Photos/PuntaIslita/thumb.jpg");
+			$("#JoshuaTree").attr('src', "media/Photos/JoshuaTree/thumb.jpg");
+			$("#TheTroupe").attr('src', "media/Photos/TheTroupe/thumb.jpg");
+			
 		}
 	});	
 </script>
