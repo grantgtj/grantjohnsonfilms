@@ -34,7 +34,7 @@
 * {
 	font-family: montserrat-light;
 	font-size: 13px;
-	color: rgba(216,216,216,1.00);
+	color: rgba(210,210,210,1.00);
 	line-height: 20px;
 }
 
@@ -53,13 +53,13 @@ html, body {
 
 @media screen and (max-width:1024px) {
 	html, body {
-	background: url("../media/General/fire1024.gif") no-repeat center bottom fixed;	
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+		background: url("../media/General/fire1024.gif") no-repeat center bottom fixed;	
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 	}
-	}
+}
 
 .pageWrapper {
 	min-height: 100%;
@@ -67,12 +67,17 @@ html, body {
 }
 
 .header a:hover {
-	color:rgba(139,139,139,1.00);
+	color:rgba(92,92,92,1.00);
+	transition: .3s;
+}
+
+.header a:hover span{
+	color:rgba(92,92,92,1.00);
 	transition: .3s;
 }
 
 .reelbox a:hover {
-	color:rgba(139,139,139,1.00);
+	color:rgba(92,92,92,1.00);
 	transition: .3s;
 }
 
@@ -90,14 +95,14 @@ html, body {
 	left:0;
 	right:0;
 	bottom:0;
-	background-color:rgba(9,9,9,1.00); /* change if the mask should be a color other than white */
+	background-color:rgba(15,15,15,1.00); /* change if the mask should be a color other than white */
 	z-index:99999999; /* makes sure it stays on top */
 }
 
 #status{
     width: 20px;
     height: 24px;
-    border: 1px rgba(255,255,255,1) solid;
+    border: 1px rgba(210,210,210,1) solid;
     border-radius: 0px 0px 5px 5px;
 	position:absolute;
 	left:50%; /* centers the loading animation horizontally on the screen */
@@ -123,12 +128,12 @@ html, body {
 #status:before{
     width: 1px;
     height: 6px;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(210,210,210,1);
     top: -10px;
     left: 4px;
-    box-shadow: 5px 0px 0px 0px rgba(255,255,255,1),
-                5px -5px 0px 0px rgba(255,255,255,1),
-                10px 0px 0px 0px rgba(255,255,255,1);
+    box-shadow: 5px 0px 0px 0px rgba(210,210,210,1),
+                5px -5px 0px 0px rgba(210,210,210,1),
+                10px 0px 0px 0px rgba(210,210,210,1);
     -webkit-animation: steam 1s linear infinite alternate;
        -moz-animation: steam 1s linear infinite alternate;
             animation: steam 1s linear infinite alternate;
@@ -171,7 +176,7 @@ html, body {
 .logo a{
 	text-decoration: none;
 	font-size: 22px;
-	color: rgba(216,216,216,1.00);
+	color: rgba(210,210,210,1.00);
 	font-family: quantify;
 	line-height: 22px;
 }
@@ -193,7 +198,7 @@ html, body {
 
 .pages a{
 	text-decoration: none;
-	color: rgba(216,216,216,1.00);
+	color: rgba(210,210,210,1.00);
 	font-size: 14px;
 	font-family: montserrat-regular;
 	text-align: center;
@@ -232,7 +237,7 @@ html, body {
 }
 
 #Selected {
-	color:rgba(139,139,139,1.00);
+	color:rgba(92,92,92,1.00);
 }
 
 
@@ -261,12 +266,11 @@ html, body {
 }
 
 .email p {
-	text-decoration: none;
 	font-size: 12px;
-	color: rgba(216,216,216,1.00);
+	color: rgba(210,210,210,1.00);
 	font-style: italic;
-
 }
+
 .socialIcons {
 	float: left;
 	height: 100%;
@@ -312,10 +316,10 @@ html, body {
 
 .reelbox a {
 	text-decoration: none;
-	color: rgba(216,216,216,1.00);
+	color: rgba(210,210,210,1.00);
 	position:absolute;
 	left: 50%;
-	bottom: 50%;
+	bottom: calc(50% + 50px);
     transform: translate(-50%,60px);
 	text-align:center;
 	z-index: 100;
@@ -335,8 +339,8 @@ html, body {
 	top: 50%;
 	height: 1px;
 	margin-top: -1px;
-	background: rgba(139,139,139,1);
-	color: rgba(139,139,139,1);
+	background: rgba(210,210,210,1);
+	color: rgba(210,210,210,1);
 	content: '';
 	z-index: 1;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
@@ -360,14 +364,15 @@ html, body {
 .reelbox a:hover,
 .reelbox a:focus {
 	outline: none;
-	color: rgba(139,139,139,1);
+	color: rgba(92,92,92,1);
 }
 
 .reelbox a:hover::before,
 .reelbox a:hover::after,
 .reelbox a:focus::before,
 .reelbox a:focus::after {
-	color: rgba(139,139,139,1);
+	color: rgba(92,92,92,1);
+	background: rgba(92,92,92,1);
 }
 
 .reelbox a:hover::before,
@@ -384,8 +389,3 @@ html, body {
 	transform: rotate(-45deg);
 }
 
-@media screen and (max-width:1024px) {
-	.reelbox a{
-	transform: translate(-50%,10px);
-	}
-}
