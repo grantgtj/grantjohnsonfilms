@@ -45,70 +45,19 @@
 		</div>	
 	</div>
 	
-	<div class="filmsGridBigWrapper">
-		<div class="filmsGridWrapper">
-			<ul id="filmsGrid">
+	<div class="filmsSelectionBigWrapper">
+		<div class="filmsSelectionWrapper">
+			<ul id="filmsSelectionGrid">
 				<li>
-					<a class="filmsGrid-cell" href="Lapse.html">
-						<img class="filmsGrid-img" src="media/Films/Lapse/lapse.jpg">
-						<span class="lapse-overlay"></span>
-						<span class="filmsGrid-text">Lapse</span>
+					<a class="filmsSelectionGrid-cell" href="Lapse.html">
+						<img class="filmsSelectionGrid-img" id="narrative" src="#"/>
+						<span id="pic1">NARRATIVE</span>
 					</a>
 				</li>
 				<li>
-					<a class="filmsGrid-cell" href="Unprotected.html">
-						<img class="filmsGrid-img" src="media/Films/Unprotected/unprotected.jpg">
-						<span class="unprotected-overlay"></span>
-						<span class="filmsGrid-text">Unprotected</span>
-					</a>
-				</li>
-				<li>
-					<a class="filmsGrid-cell" href="Stella.html">
-						<img class="filmsGrid-img" src="media/Films/Stella/stella.jpg">
-						<span class="stella-overlay"></span>
-						<span class="filmsGrid-text">Stella</span>
-					</a>
-				</li>
-					<li>
-					<a class="filmsGrid-cell" href="Lam.html">
-						<img class="filmsGrid-img" src="media/Films/Lam/lam.jpg">
-						<span class="lam-overlay"></span>
-						<span class="filmsGrid-text">Lam</span>
-					</a>
-				</li>	
-					<li>
-					<a class="filmsGrid-cell" href="KateSpade.html">
-						<img class="filmsGrid-img" src="media/Films/KateSpade/katespade.jpg">
-						<span class="katespade-overlay"></span>
-						<span class="filmsGrid-text">Kate Spade</span>
-					</a>
-				</li>
-				<li>
-					<a class="filmsGrid-cell" href="YoYoExpert.html">
-						<img class="filmsGrid-img" src="media/Films/YoYoExpert/yye.jpg">
-						<span class="yoyoexpert-overlay"></span>
-						<span class="filmsGrid-text">YoYoExpert</span>
-					</a>
-				</li>		
-					<li>
-					<a class="filmsGrid-cell" href="Apathy.html">
-						<img class="filmsGrid-img" src="media/Films/Apathy/apathy.jpg">
-						<span class="apathy-overlay"></span>
-						<span class="filmsGrid-text">Apathy</span>
-					</a>
-				</li>	
-				<li>
-					<a class="filmsGrid-cell" href="PrincessSimulator.html">
-						<img class="filmsGrid-img" src="media/Films/PrincessSimulator/ps.jpg">
-						<span class="princesssimulator-overlay"></span>
-						<span class="filmsGrid-text">Princess Simulator</span>
-					</a>
-				</li>
-				<li>
-					<a class="filmsGrid-cell" href="Nostalgia.html">
-						<img class="filmsGrid-img" src="media/Films/Nostalgia/nostalgia.jpg">
-						<span class="nostalgia-overlay"></span>
-						<span class="filmsGrid-text">Nostalgia</span>
+					<a class="filmsSelectionGrid-cell" href="Lapse.html">
+						<img class="filmsSelectionGrid-img" id="short-form" src="#"/>
+						<span id="pic2">SHORT-FORM</span>
 					</a>
 				</li>			
 			</ul>
@@ -145,29 +94,17 @@
     //]]>
 </script> 
 
-<script type="text/javascript">	
-	function isMobile() {
-	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-	}
-	if (!isMobile()) {
-		function downloadJSAtOnload() {
-			// add CSS load
-		var element = document.createElement("script");
-		element.src = "javaPlugins/defer.js";
-		document.body.appendChild(element);
-	}
-		if (window.addEventListener)
-			window.addEventListener("load", downloadJSAtOnload, false);
-	else if (window.attachEvent)
-		window.attachEvent("onload", downloadJSAtOnload);
-	else window.onload = downloadJSAtOnload;
-}	
-</script>
-
-<script>
-	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-	$('.filmsGrid-text').css({'opacity':'1', 'background-color':'rgba(0,0,0,.2)'});
-}
+<script type="text/javascript">
+    $(window).on('load', function() {
+		if (screen.width < 640) {
+			$("#narrative").attr('src', "media/Films/Selection/narrative-large.jpg");
+			$("#short-form").attr('src', "media/Films/Selection/short-form-large.jpg");
+		}
+		else {
+		    $("#narrative").attr('src', "media/Films/Selection/narrative.jpg");
+			$("#short-form").attr('src', "media/Films/Selection/short-form.jpg");
+		}
+	});	
 </script>
 
 </body>
