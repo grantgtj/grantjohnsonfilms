@@ -1,7 +1,10 @@
 @charset "UTF-8";
 /* CSS Document */
 
-.narrative-overlay {
+
+/* NARRATIVE */
+
+.dressed-overlay {
     position: absolute;
     display:block;
     top: 0;
@@ -9,17 +12,17 @@
     bottom: 0;
     right: 0;
     margin: auto;
-	background: url(../media/narrative.gif) center;
+	background: url(../media/Films/Dressed/dressed.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
 }
 
-#filmsSelectionGrid li:hover .narrative-overlay {
+.filmsGrid li:hover .dressed-overlay {
     opacity:1;
 }
 
-.short-form-overlay {
+.FLIC-overlay {
     position: absolute;
     display:block;
     top: 0;
@@ -27,35 +30,15 @@
     bottom: 0;
     right: 0;
     margin: auto;
-	background: url(../media/Films/Lapse/lapse.gif) center;
+	background: url(../media/Films/FLIC/flic.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
 }
 
-#filmsSelectionGrid li:hover .short-form-overlay {
+.filmsGrid li:hover .FLIC-overlay {
     opacity:1;
 }
-
-
-.unprotected-overlay {
-    position: absolute;
-    display:block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-	background: url(../media/Films/Unprotected/unprotected.gif) center;
-    background-size:cover;
-    opacity:0;
-    filter:alpha(opacity=0);/*For IE6 - IE8*/
-}
-
-#filmsGrid li:hover .unprotected-overlay {
-    opacity:1;
-}
-
-
 
 .lapse-overlay {
     position: absolute;
@@ -71,42 +54,43 @@
     filter:alpha(opacity=0);/*For IE6 - IE8*/
 }
 
-#filmsGrid li:hover .lapse-overlay {
+.filmsGrid li:hover .lapse-overlay {
     opacity:1;
 }
 
 .stella-overlay {
-	position: absolute;
-    display:block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-	background: url(../media/Films/Stella/stella.gif)top;
-    background-size:cover;
-    opacity:0;
-    filter:alpha(opacity=0);/*For IE6 - IE8*/
-}
-
-#filmsGrid li:hover .stella-overlay {
-    opacity:1;
-}
-
-.katespade-overlay {
     position: absolute;
     display:block;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-	background: url(../media/Films/KateSpade/katespade.gif) center;
+    margin: auto;
+	background: url(../media/Films/Stella/stella2.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
 }
 
-#filmsGrid li:hover .katespade-overlay {
+.filmsGrid li:hover .stella-overlay {
+    opacity:1;
+}
+
+.unprotected-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+	background: url(../media/Films/Unprotected/unprotected.gif) center;
+    background-size:cover;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+}
+
+.filmsGrid li:hover .unprotected-overlay {
     opacity:1;
 }
 
@@ -117,13 +101,52 @@
     left: 0;
     bottom: 0;
     right: 0;
+    margin: auto;
 	background: url(../media/Films/Lam/lam.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
 }
 
-#filmsGrid li:hover .lam-overlay {
+.filmsGrid li:hover .lam-overlay {
+    opacity:1;
+}
+
+/* SHORT-FORM */
+
+.katespade-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+	background: url(../media/Films/KateSpade/katespade.gif) center;
+    background-size:cover;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+}
+
+.filmsGrid li:hover .katespade-overlay {
+    opacity:1;
+}
+
+.yye-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+	background: url(../media/Films/YYE/yye.gif) center;
+    background-size:cover;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+}
+
+.filmsGrid li:hover .yye-overlay {
     opacity:1;
 }
 
@@ -134,32 +157,50 @@
     left: 0;
     bottom: 0;
     right: 0;
+    margin: auto;
 	background: url(../media/Films/Apathy/apathy.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
 }
 
-#filmsGrid li:hover .apathy-overlay {
+.filmsGrid li:hover .apathy-overlay {
     opacity:1;
 }
 
-
-
-.yoyoexpert-overlay {
+.jablibi-overlay {
     position: absolute;
     display:block;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-	background: url(../media/Films/YoYoExpert/yye.gif) center;
+    margin: auto;
+	background: url(../media/Films/Jablibi/jablibi.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
 }
 
-#filmsGrid li:hover .yoyoexpert-overlay {
+.filmsGrid li:hover .jablibi-overlay {
+    opacity:1;
+}
+
+.continuingforward-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+	background: url(../media/Films/ContinuingForward/continuingforward.gif) center;
+    background-size:cover;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+}
+
+.filmsGrid li:hover .continuingforward-overlay {
     opacity:1;
 }
 
@@ -170,40 +211,13 @@
     left: 0;
     bottom: 0;
     right: 0;
+    margin: auto;
 	background: url(../media/Films/Nostalgia/nostalgia.gif) center;
     background-size:cover;
     opacity:0;
     filter:alpha(opacity=0);/*For IE6 - IE8*/
 }
 
-#filmsGrid li:hover .nostalgia-overlay {
+.filmsGrid li:hover .nostalgia-overlay {
     opacity:1;
 }
-
-.princesssimulator-overlay {
-    position: absolute;
-    display:block;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-	background: url(../media/Films/PrincessSimulator/ps.gif) center;
-    background-size:cover;
-    opacity:0;
-    filter:alpha(opacity=0);/*For IE6 - IE8*/
-}
-
-#filmsGrid li:hover .princesssimulator-overlay {
-    opacity:1;
-}
-
-
-
-
-
-
-
-
-
-
-

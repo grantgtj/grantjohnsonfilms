@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grant Johnson Films</title>
-<link rel="stylesheet" href="cssSheets/style-main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="javaPlugins/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="javaPlugins/slick/slick-theme.css"/>
+<link rel="stylesheet" href="cssSheets/style-main.css">
 <link rel="shortcut icon" href="media/Favicon/favicon.ico">
 <link rel="icon" sizes="16x16 32x32 64x64" href="media/Favicon/favicon.ico">
 <link rel="icon" type="image/png" sizes="196x196" href="media/Favicon/favicon-192.png">
@@ -27,33 +27,43 @@
 <meta name="msapplication-TileColor" content="#FFFFFF">
 <meta name="msapplication-TileImage" content="media/Favicon/favicon-144.png">
 <meta name="msapplication-config" content="media/Favicon/browserconfig.xml">
-
 </head>
   
 <body>
-
-
 
 <div id="preloader">
     <div id="status"></div>
 </div>
 
-<div class="pageWrapper">
-
+<div class="headercontainer">
 	<div class="header">
-		<div class="logo">
-			<a href="index.html" id="logotext"> GRANT JOHNSON<br> <span>cinematographer</span> </a>
+		<div class="logo"> 
+			<p id="name"> GRANT JOHNSON </p> 
+			<p id="job"> cinematographer </p> 
 		</div>
-		<div class="pages">
+		<div class="nav">
+			<a href="index.html"> REEL </a>
 			<a id="Selected" href="Films.html"> FILMS </a>
 			<a href="Photos.html"> PHOTOS </a>
 			<a href="About.html"> ABOUT </a>
-		</div>	
+		</div>
+		<div class="icons">
+			<a href="#">
+				<img src="media/General/socialBadges/email_white.png">
+			</a>
+			<a href="#">
+				<img src="media/General/socialBadges/instagram_white.png">
+			</a>
+			<a href="#">
+				<img src="media/General/socialBadges/vimeo_white.png">
+			</a>
+  		</div>
 	</div>
-	
-	<div class="filmDetails">
-		<div class="filmGallery">
-	  		<div class="slider">
+</div>
+
+<div class="filmDetails">
+	<div class="filmGallery">
+		<div class="slider">
 				<div class="slider-for">
 					<div>
 						<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class="embed-container"><iframe src="https://player.vimeo.com/video/215116311" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
@@ -113,8 +123,7 @@
 					  <img src="media/Films/Lam/Stills/9.jpg">
 					</div>
 				</div>	
-			</div>
-		</div>
+		</div>	
 	<div class="filmInfoContainer">
 		<div class="filmInfo">
 			<p>
@@ -126,27 +135,10 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="footer">
-		<div class="email">
-			<p> grantgtj@gmail.com </p>
-		</div>
-		<div class="socialIcons">
-			<a href="mailto:grantgtj@gmail.com">
-			<img src="media/General/socialBadges/email_white.png">
-			</a>	
-			<a href="https://www.instagram.com/grantjohnsonfilms/" target="_top">
-			<img src="media/General/socialBadges/instagram_white.png">
-			</a>
-			<a href="https://vimeo.com/grantjohnson" target="_top">
-			<img src="media/General/socialBadges/vimeo_white.png">
-			</a>
-		</div>
-	</div>
 </div>
 
-   <script type="text/javascript" src="javaPlugins/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="javaPlugins/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="javaPlugins/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="javaPlugins/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="javaPlugins/slick/slick.js"></script>
 
 <script type="text/javascript">
@@ -158,7 +150,7 @@
 		  fade: true,
 		  asNavFor: '.slider-nav'
 	  });
-	  if (screen.width < 1024) {
+	  if (screen.width < 640) {
 		  $('.slider-nav').slick({
 		  slidesToShow: 3,
 		  slidesToScroll: 1,
