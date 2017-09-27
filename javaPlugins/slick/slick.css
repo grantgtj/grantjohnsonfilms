@@ -13,12 +13,6 @@
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent; }
 
-@media screen and (max-width:1024px) {
-	.slick-slider {
-		padding-left: 0;
-	}
-}
-
 .slick-list {
   position: relative;
   overflow: hidden;
@@ -55,8 +49,8 @@
 .slick-slide {
   float: left;
   height: 100%;
+ margin: 0 5px 0px 5px;
   min-height: 1px;
-	margin: 5px;
   display: none; }
   [dir="rtl"] .slick-slide {
     float: right; }
@@ -74,7 +68,6 @@
     display: block;
     height: auto;
     border: 1px solid transparent; }
-
 
 .slick-arrow.slick-hidden {
   display: none; }

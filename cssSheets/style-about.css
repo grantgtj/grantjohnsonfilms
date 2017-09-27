@@ -1,29 +1,30 @@
 @charset "UTF-8";
+
 /* CSS Document */
 
 @font-face {
 	font-family: montserrat-regular;
-    src: url(../media/Fonts/montserrat/Montserrat-Regular.otf);
+	src: url(../media/Fonts/montserrat/Montserrat-Regular.otf);
 }
 
 @font-face {
 	font-family: montserrat-bold;
-    src: url(../media/Fonts/montserrat/Montserrat-Bold.otf);
+	src: url(../media/Fonts/montserrat/Montserrat-Bold.otf);
 }
 
 @font-face {
 	font-family: montserrat-light;
-    src: url(../media/Fonts/montserrat/Montserrat-Light.otf);
+	src: url(../media/Fonts/montserrat/Montserrat-Light.otf);
 }
 
 @font-face {
 	font-family: montserrat-extralight;
-    src: url(../media/Fonts/montserrat/Montserrat-ExtraLight.otf);
+	src: url(../media/Fonts/montserrat/Montserrat-ExtraLight.otf);
 }
 
 @font-face {
 	font-family: montserrat-thin;
-    src: url(../media/Fonts/montserrat/Montserrat-Thin.otf);
+	src: url(../media/Fonts/montserrat/Montserrat-Thin.otf);
 }
 
 @font-face {
@@ -34,7 +35,7 @@
 * {
 	font-family: montserrat-light;
 	font-size: 13px;
-	color: rgba(210,210,210,1.00);
+	color: rgba(255, 255, 255, 1.00);
 	line-height: 20px;
 }
 
@@ -42,30 +43,43 @@ html, body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
+	overflow: hidden;
 	background: url("../media/About/bg.jpg") no-repeat top right fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	overflow: scroll;
-	-webkit-overflow-scrolling: touch;
+	overflow-x: hidden;
 }
 
-@media screen and (max-width:768px) , screen and (max-height: 736)  {
+@media screen and (max-width:768px), screen and (max-height: 736) {
 	html, body {
-	background: rgba(15,15,15,1.00) 
+		background: rgba(0, 0, 0, 1.00);
 	}
 }
 
-.pageWrapper {
-	min-height: 100%;
-	position: relative;
+
+/* Scroll Track */
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: rgba(0, 0, 0, 0);
 }
 
-#view a:hover {
-	color:rgba(92,92,92,1.00);
-	transition: .3s;
-	border: 2px solid rgba(92,92,92,1.00);
+
+/* Scroll Handle */
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	background: rgba(150, 150, 150, 0.25);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(150, 150, 150, 0.25);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
 }
 
 
@@ -73,74 +87,83 @@ html, body {
 
 #preloader {
 	position: fixed;
-	top:0;
-	left:0;
-	right:0;
-	bottom:0;
-	background-color:rgba(15,15,15,1.00); /* change if the mask should be a color other than white */
-	z-index:99999999; /* makes sure it stays on top */
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 1.00);
+	/* change if the mask should be a color other than white */
+	z-index: 99999999;
+	/* makes sure it stays on top */
 }
 
-#status{
-    width: 20px;
-    height: 24px;
-    border: 1px rgba(210,210,210,1) solid;
-    border-radius: 0px 0px 5px 5px;
-	position:absolute;
-	left:50%; /* centers the loading animation horizontally on the screen */
-	top:50%;
-	margin: -10px 0 0 -12px;	
+#status {
+	width: 20px;
+	height: 24px;
+	border: 1px rgba(255, 255, 255, 1) solid;
+	border-radius: 0px 0px 5px 5px;
+	position: absolute;
+	left: 50%;
+	/* centers the loading animation horizontally on the screen */
+	top: 50%;
+	margin: -12px 0 0 -10px;
 }
 
-#status:after, #status:before{
-    position: absolute;
-    content: "";
+#status:after, #status:before {
+	position: absolute;
+	content: "";
 }
 
-#status:after{
-    width: 5px;
-    height: 12px;
-    border: 1px #fff solid;
-    border-left: none;
-    border-radius: 0px 20px 20px 0px;
-    left: 20px;
+#status:after {
+	width: 5px;
+	height: 12px;
+	border: 1px rgba(255, 255, 255, 1) solid;
+	border-left: none;
+	border-radius: 0px 20px 20px 0px;
+	left: 20px;
 }
 
-#status:before{
-    width: 1px;
-    height: 6px;
-    background-color: rgba(210,210,210,1);
-    top: -10px;
-    left: 4px;
-    box-shadow: 5px 0px 0px 0px rgba(210,210,210,1),
-                5px -5px 0px 0px rgba(210,210,210,1),
-                10px 0px 0px 0px rgba(210,210,210,1);
-    -webkit-animation: steam 1s linear infinite alternate;
-       -moz-animation: steam 1s linear infinite alternate;
-            animation: steam 1s linear infinite alternate;
+#status:before {
+	width: 1px;
+	height: 6px;
+	background-color: rgba(255, 255, 255, 1);
+	top: -10px;
+	left: 4px;
+	box-shadow: 5px 0px 0px 0px rgba(255, 255, 255, 1), 5px -5px 0px 0px rgba(255, 255, 255, 1), 10px 0px 0px 0px rgba(255, 255, 255, 1);
+	-webkit-animation: steam 1s linear infinite alternate;
+	-moz-animation: steam 1s linear infinite alternate;
+	animation: steam 1s linear infinite alternate;
 }
 
-@-webkit-keyframes steam{
-    0%{height: 0px;}
-    100%{height: 6px;}            
+@-webkit-keyframes steam {
+	0% {
+		height: 0px;
+	}
+	100% {
+		height: 6px;
+	}
 }
 
-@-moz-keyframes steam{
-    0%{height: 0px}
-    100%{height: 6px;}            
+@-moz-keyframes steam {
+	0% {
+		height: 0px
+	}
+	100% {
+		height: 6px;
+	}
 }
 
-@keyframes steam{
-    0%{height: 0px}
-    100%{height: 6px;}            
+@keyframes steam {
+	0% {
+		height: 0px
+	}
+	100% {
+		height: 6px;
+	}
 }
+
 
 /* HEADER */
-
-.headercontainer a:hover {
-	color:rgba(92,92,92,1.00);
-	transition: .3s;
-}
 
 .headercontainer {
 	display: flex;
@@ -148,7 +171,7 @@ html, body {
 	justify-content: center;
 	height: 70px;
 	border-bottom: solid 1px;
-	border-color:rgba(255,255,255,0.30);
+	border-color: rgba(255, 255, 255, 0.30);
 }
 
 .header {
@@ -166,7 +189,7 @@ html, body {
 }
 
 .logo p {
-	margin:0 0 -.25em 0;
+	margin: 0 0 -.25em 0;
 }
 
 #name {
@@ -182,7 +205,6 @@ html, body {
 	flex: 1;
 	display: flex;
 	justify-content: center;
-	
 }
 
 .nav a {
@@ -196,6 +218,7 @@ html, body {
 	flex: 1;
 	display: flex;
 	justify-content: flex-end;
+	align-self: center;
 }
 
 .icons a {
@@ -203,12 +226,23 @@ html, body {
 }
 
 .icons img {
-	height: 20px;
-	margin-left: 5px;
+	height: 23px;
+	margin-left: 7px;
+	margin-top: 4px;
 }
 
 #Selected {
-	color:rgba(92,92,92,1.00);
+	color: rgba(92, 92, 92, 1.00);
+}
+
+.headercontainer a:hover {
+	color: rgba(92, 92, 92, 1.00);
+	transition: .3s;
+}
+
+.headercontainer img:hover {
+	opacity: .3;
+	transition: .3s;
 }
 
 @media (max-width: 640px) {
@@ -224,7 +258,7 @@ html, body {
 		text-align: center;
 	}
 	.logo p {
-		margin:0 0 -.15em 0;
+		margin: 0 0 -.15em 0;
 	}
 	#name {
 		font-family: quantify;
@@ -246,135 +280,158 @@ html, body {
 	}
 	.icons img {
 		height: 22px;
-		margin-left: 3px;
-		margin-right: 3px;
+		margin-left: 4px;
+		margin-right: 4px;
 	}
-}	
+}
+
 
 /* ABOUT ME PAGE ELEMENTS */
 
 .aboutTextBigWrapper {
-	width: 90%;
-	margin: 0 auto;
-	z-index: -100;
-	height: 100%;
+	width: 100%;
 }
 
 .aboutTextWrapper {
-	height: calc(100vh - 200px);
 	display: flex;
+	width: 80%;
+	z-index: -100;
+	height: calc(100vh - 75px);
 	flex-direction: column;
 	justify-content: center;
+	margin-left: 7.5%;
 }
 
-
 .aboutText {
-	color: rgba(210,210,210,1.00);
+	display: flex;
 	width: 60%;
-	text-align: left;
 	margin: 15px 0px 15px 0px;
 }
 
-#view{
-	width:60%;
+.aboutText p {
+	text-align: center;
+}
+
+.aboutTextWrapper span {
+	font-family: montserrat-regular;
+}
+
+#view {
+	width: 60%;
 	text-align: center;
 }
 
 #viewResume {
-	border: 2px solid rgba(210,210,210,1.00);
-	opacity:1;
-	border-radius:4px;
-	color: rgba(210,210,210,1.00);
+	border: 2px solid rgba(255, 255, 255, 1.00);
+	opacity: 1;
+	border-radius: 4px;
+	color: rgba(255, 255, 255, 1.00);
 	text-decoration: none;
-	display:block;
-	line-height:23px;
-	height:23px;
-	width:105px;
-	text-align:center;
+	display: block;
+	line-height: 23px;
+	height: 23px;
+	width: 105px;
+	text-align: center;
 	margin-top: 15px;
 	font-size: 12px;
 }
 
+#view a:hover {
+	color: rgba(92, 92, 92, 1.00);
+	transition: .3s;
+	border: 2px solid rgba(92, 92, 92, 1.00);
+}
 
 .icon {
 	display: none;
-	margin-left:auto;
-	margin-right:auto;
-	width:100%;
-	height:auto;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: auto;
 	text-align: center;
 }
 
 .icon img {
-	width:150px;
+	width: 150px;
 }
 
-@media screen and (max-device-width:767px) , screen and (max-height: 736px) { /* iPhone Portrait & Landscape */ 
+.banner {
+	display: none;
+}
+
+@media screen and (max-device-width:767px) {
+	/* iPhone Portrait & Landscape */
 	body, html {
-		background:rgba(15,15,15,1.00);
+		background: rgba(0, 0, 0, 1.00);
 	}
 	.icon {
 		display: block;
 	}
-	
 	.icon img {
-		padding-top: 15px;
+		padding-top: 37px;
+		padding-bottom: 10px;
+	}
+	.aboutTextBigWrapper {
+		display: flex;
+		justify-content: center;
 	}
 	.aboutTextWrapper {
-		position: relative;
 		top: auto;
 		height: auto;
-		margin-bottom: 100px;
+		margin-bottom: 37px;
+		width: 80%;
+		margin-left: 0;
 	}
 	.aboutText {
 		text-align: center;
 		width: 100%;
+		justify-content: center;
 	}
 	#view {
-		width:100%;
-		display:flex;
+		width: 100%;
+		display: flex;
 		justify-content: center;
 	}
 }
 
-@media only screen 
-and (min-device-width : 768px) 
-	and (max-device-width : 1024px) and (orientation:portrait) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
 	body, html {
-		background:rgba(15,15,15,1.00);
+		background: rgba(0, 0, 0, 1.00);
 	}
-	.aboutContent{
-		height: calc(100vh - 200px);
-		display:flex;
-		flex-direction: column;
+	.banner {
+		display: block;
+	}
+	.banner img {
+		width: 100%;
+		height: auto;
+		padding-top: 37px;
+		padding-bottom: 37px;
+	}
+	.aboutContent {
+		display: flex;
 		justify-content: center;
+		flex-direction: column;
+		height: calc(100vh - 75px);
 	}
-	.icon {
-		display:block;
-		margin:30px 0px 30px 0px;
-	}
-	.icon img {
-		width:175px;
-	}
-	.aboutTextBigWrapper{
-		z-index:100;
-		height:auto;
-		text-align: center;
-		display:flex;
+	.aboutTextBigWrapper {
+		display: flex;
 		justify-content: center;
 	}
 	.aboutTextWrapper {
-		position: relative;
+		top: auto;
 		height: auto;
-		width:80%;
+		margin-bottom: 37px;
+		width: 80%;
+		margin-left: 0;
 	}
 	.aboutText {
 		text-align: center;
 		width: 100%;
+		justify-content: center;
 	}
 	#view {
-		width:100%;
-		display:flex;
+		width: 100%;
+		display: flex;
 		justify-content: center;
 	}
 }
