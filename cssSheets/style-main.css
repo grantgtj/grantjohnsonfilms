@@ -51,6 +51,7 @@ html, body {
 	width: 100%;
 	background-color: rgba(0, 0, 0, 1.00);
 	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 
 

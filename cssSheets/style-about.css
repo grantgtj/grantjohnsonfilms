@@ -50,6 +50,7 @@ html, body {
 	-o-background-size: cover;
 	background-size: cover;
 	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
 }
 
 @media screen and (max-width:768px), screen and (max-height: 736) {
