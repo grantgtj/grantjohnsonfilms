@@ -788,3 +788,32 @@ html, body {
 		display: table-header-group;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+#insta {
+}
+
+#circle {
+	width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+#svg {
+	width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 8px;
+    stroke: white;
+}

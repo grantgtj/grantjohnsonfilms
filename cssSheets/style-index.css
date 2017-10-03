@@ -269,72 +269,40 @@ html, body {
 	}
 }
 
+/* Reel */
 
-/* REELBOX */
-
-.reelbox a {
-	text-decoration: none;
-	color: rgba(255, 255, 255, 1.00);
-	position: absolute;
-	left: 50%;
-	bottom: calc(50% + 50px);
-	transform: translate(-50%, 60px);
+#view {
+	display: flex;
+	justify-content: center;
 	text-align: center;
-	z-index: 100;
-	font-size: 14px;
-	padding: 0 5px;
-	-webkit-transition: color 0.3s;
-	-moz-transition: color 0.3s;
-	transition: color 0.3s;
+	height: calc(100vh - 137px);
 }
 
-.reelbox a::before, .reelbox a::after {
-	position: absolute;
-	width: 100%;
-	left: 0;
-	top: 50%;
-	height: 1px;
-	margin-top: -1px;
-	background: rgba(255, 255, 255, 1);
-	color: rgba(255, 255, 255, 1);
-	content: '';
-	z-index: 1;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	pointer-events: none;
+#viewReel {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid rgba(255, 255, 255, 0.70);
+	opacity: 1;
+	border-radius: 4px;
+	color: rgba(255, 255, 255, 1.00);
+	font-size: 13px;
+	text-decoration: none;
+	line-height: 20px;
+	height: 25px;
+	width: 85px;
+	text-align: center;
+	align-self: center;
 }
 
-.reelbox a::before {
-	-webkit-transform: translateY(-20px);
-	-moz-transform: translateY(-20px);
-	transform: translateY(-20px);
+#view a:hover {
+	transition: .5s;
+	background-color: white;
+	color: black;
 }
 
-.reelbox a::after {
-	-webkit-transform: translateY(20px);
-	-moz-transform: translateY(20px);
-	transform: translateY(20px);
-}
-
-.reelbox a:hover, .reelbox a:focus {
-	outline: none;
-	color: rgba(92, 92, 92, 1);
-}
-
-.reelbox a:hover::before, .reelbox a:hover::after, .reelbox a:focus::before, .reelbox a:focus::after {
-	color: rgba(92, 92, 92, 1);
-	background: rgba(92, 92, 92, 1);
-}
-
-.reelbox a:hover::before, .reelbox a:hover::before {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.reelbox a:hover::after, .reelbox a:hover::after {
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+@media (max-width: 640px) {
+	#view {
+	height:calc(100vh - 280px);
+	}
 }
