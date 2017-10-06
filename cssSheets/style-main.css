@@ -759,25 +759,19 @@ html, body {
 	align-self: center;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1024px) {
 	#photosAlbumGrid li {
 		width: 20%;
 	}
 }
 
-@media (max-width: 1150px) {
-	#photosAlbumGrid li {
-		width: 25%;
-	}
-}
-
-@media (max-width: 1024px) {
+@media (max-width: 650px) {
 	#photosAlbumGrid li {
 		width: 33.33%;
 	}
 }
 
-@media (max-width: 640px) {
+@media (max-width: 400px) {
 	#photosAlbumGrid {
 		width: 100%;
 	}
@@ -787,33 +781,4 @@ html, body {
 	.photosAlbumGridBigWrapper {
 		display: table-header-group;
 	}
-}
-
-
-
-
-
-
-
-
-
-
-#insta {
-}
-
-#circle {
-	width: 20px;
-    height: 20px;
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid white;
-}
-
-#svg {
-	width: 20px;
-    height: 20px;
-    position: absolute;
-    margin-left: 8px;
-    margin-top: 8px;
-    stroke: white;
 }

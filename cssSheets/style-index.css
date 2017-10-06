@@ -275,7 +275,7 @@ html, body {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	height: calc(100vh - 137px);
+	height: calc(100% - 137px);
 }
 
 #viewReel {
@@ -303,6 +303,6 @@ html, body {
 
 @media (max-width: 640px) {
 	#view {
-	height:calc(100vh - 280px);
+	height:calc(100% - 280px);
 	}
 }
